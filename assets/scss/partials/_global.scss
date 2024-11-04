@@ -1,0 +1,78 @@
+@use "./variables";
+
+:root {
+  font-family: "Gabarito", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-optical-sizing: auto;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: variables.$colors-neutral-700;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 90rem; //1440px
+  margin: 0 auto;
+}
+
+.relative {
+  position: relative;
+}
+
+.grid-center {
+  display: grid;
+  place-content: center;
+  height: 100%;
+}
+
+.hero-padding__offset {
+  padding: 6rem 0 3rem 0;
+}
+
+// fonts
+h2 {
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 88%;
+  letter-spacing: -0.1rem;
+}
+
+// Animations
+@keyframes rotate-45s {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
