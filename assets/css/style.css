@@ -327,7 +327,7 @@ template {
     background-color: #ffffff;
   }
   a:hover {
-    color: hsl(0, 0%, 37%);
+    color: hsl(213, 13%, 14%);
   }
   button {
     background-color: #f9f9f9;
@@ -417,6 +417,7 @@ h2 {
   width: 6rem;
   height: 6rem;
   display: inline-block;
+  transform: translateX(3px);
 }
 .media-card__title .smiley img {
   width: 100%;
@@ -482,7 +483,7 @@ video,
   padding: 0.75rem 1.5rem;
   border: 1px transparent;
   border-radius: 3rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 700;
   text-transform: capitalize;
   text-decoration: none;
@@ -588,7 +589,7 @@ video,
   padding-top: 2rem;
 }
 .content-list__title {
-  color: hsl(217, 100%, 37%);
+  color: hsl(0, 0%, 0%);
   max-width: 50%;
   flex: 1;
 }
@@ -605,6 +606,7 @@ video,
   padding: 0;
   margin: 0;
   position: relative;
+  list-style: none;
 }
 .content-list__list:before {
   content: "";
@@ -646,17 +648,79 @@ video,
 .footer {
   width: 100%;
   max-width: 100%;
-  padding: 5rem 0 2rem 0;
+  padding-top: 5rem;
+}
+.footer .featured-events {
+  display: flex;
+  flex-direction: column;
+}
+.footer .featured-events .section-title {
+  color: #242424;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 88%;
+  letter-spacing: -0.07rem;
+  text-transform: capitalize;
+  margin: 0;
+}
+.footer .featured-events .content-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.footer .featured-events .content-grid .featured-event-single {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 3.75rem;
+}
+.footer .give-breaker {
+  width: 100%;
+  background-color: #626262;
+  background-image: url("http://localhost:5173/assets/images/prayer-2544994_1920.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  padding: 9.38rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer .give-breaker h4 {
+  color: hsl(0, 0%, 98%);
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 88%;
+  letter-spacing: -0.045rem;
+  margin: 0 0 1rem 0;
+}
+.footer .give-breaker p {
+  max-width: 49rem;
+  color: hsl(0, 0%, 96%);
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  margin: 0 0 2rem 0;
 }
 .footer .dark-footer {
   background-color: hsl(0, 0%, 4%);
 }
 .footer__top {
-  padding-bottom: 2rem;
+  padding: 4rem 0 2rem 0;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 8rem;
+}
+.footer__top .staff-login {
+  margin-top: 3rem;
 }
 .footer__top-links {
   display: flex;
@@ -740,36 +804,35 @@ video,
 .footer__top-info .subscribe .subscribe-form button {
   height: 100%;
 }
-.footer__top-info .social-icons,
-.footer__top-info .payment-options {
-  width: 100%;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: flex-end;
-}
 .footer__bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-top: 1px solid #222222;
   color: #626262;
-  padding-top: 2rem;
+  padding: 2rem 0;
 }
 .footer__bottom .legal {
   display: flex;
+  flex: 1;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+  color: hsl(0, 0%, 91%);
 }
 .footer__bottom .legal a {
-  color: #626262;
+  color: hsl(0, 0%, 91%);
   text-decoration: none;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
-.footer__bottom .dot-separator {
-  width: 0.5rem;
-  height: 0.5rem;
-  background-color: #626262;
-  border-radius: 50%;
+.footer__bottom .social-icons {
+  width: fit-content;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 /*# sourceMappingURL=style.css.map */
