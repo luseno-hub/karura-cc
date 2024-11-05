@@ -56,6 +56,7 @@ h2 {
   font-weight: 700;
   line-height: 88%;
   letter-spacing: -0.1rem;
+  margin: 0;
 }
 
 // Animations
@@ -75,4 +76,10 @@ h2 {
   100% {
     transform: rotate(0deg);
   }
+}
+
+// Utilities
+.inline-center {
+  display: inline-grid;
+  place-content: center;
 }
