@@ -4,18 +4,88 @@
 .footer {
   width: 100%;
   max-width: 100%;
-  padding: 5rem 0 2rem 0;
+  padding-top: 5rem;
+
+  .featured-events {
+    display: flex;
+    flex-direction: column;
+
+    .section-title {
+      color: #242424;
+      font-size: 3.5rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 88%;
+      letter-spacing: -0.07rem;
+      text-transform: capitalize;
+      margin: 0;
+    }
+
+    .content-grid {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      .featured-event-single {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 3.75rem;
+      }
+    }
+  }
+
+  .give-breaker {
+    width: 100%;
+    background-color: #626262;
+    background-image: url("http://localhost:5173/assets/images/prayer-2544994_1920.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    padding: 9.38rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h4 {
+      color: variables.$colors-neutral-150;
+      font-size: 2.25rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 88%;
+      letter-spacing: -0.045rem;
+      margin: 0 0 1rem 0;
+    }
+
+    p {
+      max-width: 49rem;
+      color: variables.$colors-neutral-200;
+      text-align: center;
+      font-size: 1.2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      margin: 0 0 2rem 0;
+    }
+  }
 
   .dark-footer {
     background-color: variables.$colors-neutral-850;
   }
 
   &__top {
-    padding-bottom: 2rem;
+    padding: 4rem 0 2rem 0;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     gap: 8rem;
+
+    .staff-login {
+      margin-top: 3rem;
+    }
 
     &-links {
       display: flex;
@@ -117,15 +187,6 @@
           }
         }
       }
-
-      .social-icons,
-      .payment-options {
-        width: 100%;
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-        justify-content: flex-end;
-      }
     }
   }
 
@@ -135,24 +196,31 @@
     justify-content: space-between;
     border-top: 1px solid #222222;
     color: #626262;
-    padding-top: 2rem;
+    padding: 2rem 0;
 
     .legal {
       display: flex;
+      flex: 1;
       align-items: center;
-      gap: 1rem;
+      gap: 2rem;
+      color: variables.$colors-neutral-400;
 
       a {
-        color: #626262;
+        color: variables.$colors-neutral-400;
         text-decoration: none;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
       }
     }
 
-    .dot-separator {
-      width: 0.5rem;
-      height: 0.5rem;
-      background-color: #626262;
-      border-radius: 50%;
+    .social-icons {
+      width: fit-content;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      justify-content: flex-end;
     }
   }
 }

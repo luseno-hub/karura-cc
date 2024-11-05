@@ -146,7 +146,7 @@
           </p>
           <div class="media-card__CTAs-wrapper">
             <a href="#" class="button button__primary"
-              ><span class="icon-span"
+              ><span class="inline-center"
                 ><img src="./assets/icons/video-play-dark.svg" alt="play video"
               /></span>
               Latest sermon
@@ -162,7 +162,7 @@
         </div>
       </section>
 
-      <div class="explore content-list">
+      <section class="explore content-list">
         <div class="container layout">
           <h2 class="content-list__title">Explore our community</h2>
           <nav>
@@ -270,7 +270,7 @@
             </ul>
           </nav>
         </div>
-      </div>
+      </section>
 
       <section class="city-on-a-hill media-card image-container">
         <img
@@ -280,19 +280,18 @@
         />
         <div class="content">
           <h2 class="s">City On A Hill</h2>
+          <p class="media-card__text">
+            We are on a mission. It's time to build our permanent Worship &
+            Community Centre.
+          </p>
           <div class="media-card__CTAs-wrapper">
-            <a href="#" class="button button__primary"
-              ><span class="icon-span"
-                ><img src="./assets/icons/video-play-dark.svg" alt="play video"
-              /></span>
-              Give
-            </a>
+            <a href="#" class="button button__primary"> Pledge </a>
 
             <a
               href="#"
               class="button button__secondary button__secondary-outline-white"
             >
-              Pledge
+              See progress
             </a>
           </div>
         </div>
@@ -300,9 +299,9 @@
     </main>
 
     <footer class="footer">
-      <div class="featured-events">
-        <div class="linked-title">
-          <span class="section-title">Featured events</span>
+      <section class="featured-events">
+        <div class="linked-title container">
+          <h3 class="section-title">Featured events</h3>
           <a href="#" class="archive-cta">
             All events
             <span
@@ -327,24 +326,27 @@
             <span class="date">8th February, 2023</span>
             <span class="title">Redefining success: Highlights so far</span>
           </div>
-          <div class="featured-media-karura"></div>
+          <div class="featured-event-single karura-voices">
+            <div class="image">
+              <img src="https://picsum.photos/350/300" alt="featured event" />
+            </div>
+            <span class="date">8th February, 2023</span>
+            <span class="title">Redefining success: Highlights so far</span>
+          </div>
         </div>
-      </div>
-      <div class="give-breaker">
+      </section>
+
+      <section class="give-breaker">
         <h4>Support</h4>
         <p>
           Your contribution supports our mission, outreach, and the spiritual
           growth of many in your community and around the world.
         </p>
-        <a href="#" class="archive-cta">
-          Give
-          <span
-            ><img src="./assets/icons/arrow-down.svg" alt="arrow down"
-          /></span>
-        </a>
-      </div>
-      <div class="dark-footer">
-        <div class="footer__top">
+        <a href="#" class="archive-cta button button__primary"> Give </a>
+      </section>
+
+      <section class="dark-footer">
+        <div class="footer__top container">
           <div class="footer__top-links">
             <div class="contact-info">
               <p class="column-title">Reach out</p>
@@ -413,9 +415,14 @@
                 </li>
                 <li><a href="#" class="footer-hrefs">testimonies</a></li>
               </ul>
-              <a href="#">
+              <a
+                href="#"
+                class="button button__secondary-outline-white staff-login"
+              >
                 Staff login
-                <span><img src="./assets/icons/login.svg" alt="login" /></span>
+                <span class="inline-center"
+                  ><img src="./assets/icons/login.svg" alt="login"
+                /></span>
               </a>
             </div>
             <div class="company">
@@ -452,28 +459,32 @@
             </div>
           </div>
         </div>
-        <div class="footer__bottom">
+        <section class="footer__bottom container">
           <div class="legal">
             <p>© 2024 Karura Community Chapel. All Rights Reserved.</p>
             <a href="#" title="Terms of Service">Terms of use</a>
             <a href="#" title="Privacy Policy">Privacy Policy</a>
           </div>
+
           <div class="social-icons">
-            <a href="#" title="Facebook" class="social-icon"
-              ><img src="./assets/icons/facebook.svg" alt="Facebook icon"
+            <a href="#" title="Whatsapp" class="social-icon"
+              ><img src="./assets/icons/whatsapp.svg" alt="Whatsapp icon"
             /></a>
-            <a href="#" title="X" class="social-icon"
-              ><img src="./assets/icons/x.svg" alt="X icon"
-            /></a>
-            <a href="#" title="LinkedIn" class="social-icon"
-              ><img src="./assets/icons/linkedin.svg" alt="Linked in icon"
+            <a href="#" title="Youtube" class="social-icon"
+              ><img src="./assets/icons/youtube.svg" alt="Youtube icon"
             /></a>
             <a href="#" title="Instagram" class="social-icon"
-              ><img src="./assets/icons/pinterest.svg" alt="Instagram icon"
+              ><img src="./assets/icons/instagram.svg" alt="Instagram icon"
+            /></a>
+            <a href="#" title="Spotify" class="social-icon"
+              ><img src="./assets/icons/spotify.svg" alt="Spotify icon"
+            /></a>
+            <a href="#" title="Tiktok" class="social-icon"
+              ><img src="./assets/icons/tiktok.svg" alt="Tiktok icon"
             /></a>
           </div>
-        </div>
-      </div>
+        </section>
+      </section>
     </footer>
     <script type="module" src="./assets/Js/main.js"></script>
   </body>

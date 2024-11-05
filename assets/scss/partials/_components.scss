@@ -35,6 +35,7 @@
       width: 6rem;
       height: 6rem;
       display: inline-block;
+      transform: translateX(3px);
 
       img {
         width: 100%;
@@ -105,7 +106,7 @@ video,
   padding: 0.75rem 1.5rem;
   border: 1px transparent;
   border-radius: 3rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 700;
   text-transform: capitalize;
   text-decoration: none;
@@ -221,7 +222,7 @@ video,
   }
 
   &__title {
-    color: variables.$colors-secondary-900;
+    color: variables.$colors-neutral-900;
     max-width: 50%;
     flex: 1;
   }
@@ -240,6 +241,7 @@ video,
     padding: 0;
     margin: 0;
     position: relative;
+    list-style: none;
 
     &:before {
       content: "";
