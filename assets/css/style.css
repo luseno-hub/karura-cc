@@ -320,6 +320,11 @@ template {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+:root *,
+:root *::before,
+:root *::after {
+  box-sizing: border-box;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -334,8 +339,7 @@ template {
   }
 }
 .container {
-  width: 100%;
-  max-width: 90rem;
+  width: calc(100% - 200px);
   margin: 0 auto;
 }
 
@@ -382,6 +386,13 @@ h2 {
 .inline-center {
   display: inline-grid;
   place-content: center;
+}
+
+.inline-align-center {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5em;
 }
 
 .media-card {
@@ -645,6 +656,63 @@ video,
   transform: translateX(0.5rem);
 }
 
+.header {
+  width: 100%;
+  z-index: 100;
+  position: sticky;
+  top: 0;
+}
+.header__layout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__navbar ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  list-style: none;
+}
+.header__navbar ul li {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.header__navbar ul li a {
+  color: #333;
+  text-decoration: none;
+}
+.header__navbar ul li a:hover {
+  background-color: #f0f0f0;
+}
+.header__navbar ul li:hover .dropdown {
+  display: block;
+}
+.header__navbar ul li .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.header__navbar ul li .dropdown li {
+  padding: 8px 16px;
+}
+.header__navbar ul li .dropdown li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+.header__navbar ul li .dropdown li a:hover {
+  background-color: #f0f0f0;
+}
 .footer {
   width: 100%;
   max-width: 100%;
@@ -667,13 +735,30 @@ video,
 .footer .featured-events .content-grid {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .footer .featured-events .content-grid .featured-event-single {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  min-width: calc((100% - 15rem) / 3);
+  width: calc((100% - 15rem) / 3);
   padding: 3.75rem;
+}
+.footer .featured-events .content-grid .featured-event-single:first-of-type {
+  padding: 3.75rem 3.75rem 3.75rem 6.25rem;
+}
+.footer .featured-events .content-grid .featured-event-single:last-of-type {
+  background-color: red;
+  padding: 3.75rem 6.25rem 3.75rem 3.75rem;
+}
+.footer .featured-events .content-grid .featured-event-single .image {
+  width: 100%;
+}
+.footer .featured-events .content-grid .featured-event-single .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .footer .give-breaker {
   width: 100%;
