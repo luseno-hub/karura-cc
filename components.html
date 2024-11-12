@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- font import starts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font import ends -->
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karura Community Chapel | Components</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <!-- Tabs start-->
+        <div class="tabs">
+          <div class="tab active" data-tab="description">Description</div>
+          <div class="tab" data-tab="reviews">Reviews</div>
+        </div>
+        <div class="content active" id="description">
+          This is the description content.
+        </div>
+        <div class="content" id="reviews">This is the reviews content.</div>
+        <!-- Tabs end-->
+      </div>
+    </main>
+    <script type="module" src="./assets/Js/main.js"></script>
+  </body>
+</html>

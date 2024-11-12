@@ -768,6 +768,40 @@ video,
   transform: translateX(0.5rem);
 }
 
+.tabs {
+  display: flex;
+  border-radius: 2rem;
+  background-color: #eee;
+  box-sizing: border-box;
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+  padding: 0.25rem;
+  width: fit-content;
+  font-size: 14px;
+}
+.tabs .tab {
+  padding: 10px 20px;
+  color: #000;
+  font-family: "Satoshi Variable";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  border-radius: 2rem;
+}
+.tabs .tab.active {
+  background-color: #fff;
+}
+
+.content {
+  display: none;
+  color: #8a8a8a;
+}
+.content.active {
+  display: block;
+}
+
 .header {
   width: 100%;
   z-index: 100;
