@@ -794,11 +794,11 @@ video,
   background-color: #fff;
 }
 
-.content {
+.tab-content {
   display: none;
   color: #8a8a8a;
 }
-.content.active {
+.tab-content.active {
   display: block;
 }
 
@@ -1059,8 +1059,8 @@ video,
   justify-content: flex-end;
 }
 
-.hero {
-  margin-top: -103px;
+.give-options {
+  background-color: blue;
 }
 
 /*# sourceMappingURL=style.css.map */

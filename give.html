@@ -140,7 +140,52 @@
         </p>
       </section>
 
-      <section class="give-options"></section>
+      <section class="give-options">
+        <div class="container">
+          <!-- Tabs start-->
+          <div class="tabs">
+            <div class="tab active" data-tab="automated">Automated Giving</div>
+            <div class="tab" data-tab="offline">Offline Giving</div>
+          </div>
+          <div class="tab-content active" id="automated">
+            <h3>Option 1: Automated Giving</h3>
+            <form action="">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" />
+              </div>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" />
+              </div>
+              <div class="form-group">
+                <label for="number">Number</label>
+                <input type="number" name="number" id="number" />
+              </div>
+              <div class="form-group">
+                <label for="number">Currency</label>
+                <select title="currency">
+                  <option value="KSH">KSH</option>
+                  <option value="USD">USD</option>
+                  <option value="BSP">BSP</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="number">Number</label>
+                <input type="number" name="number" id="number" />
+              </div>
+              <div class="form-group">
+                <label for="number">Number</label>
+                <input type="number" name="number" id="number" />
+              </div>
+            </form>
+          </div>
+          <div class="tab-content" id="offline">
+            This is the roffline content.
+          </div>
+          <!-- Tabs end-->
+        </div>
+      </section>
     </main>
 
     <footer class="footer">

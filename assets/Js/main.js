@@ -1,7 +1,7 @@
 // Tabs
 
 const tabs = document.querySelectorAll(".tab");
-const contents = document.querySelectorAll(".content");
+const contents = document.querySelectorAll(".tab-content");
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
     // Remove active class from all tabs and contents
