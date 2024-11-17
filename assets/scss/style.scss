@@ -1,7 +1,9 @@
+// @use "../../node_modules/normalize.css/normalize.css";
 @use "../../node_modules/normalize.css/normalize.css";
 
 @use "../scss/partials/global";
 @use "../scss/partials/components";
 @use "../scss/partials/header";
 @use "../scss/partials/footer";
-@use "../scss/partials/home";
+// @use "../scss/partials/home";
+@use "../scss/partials/give";

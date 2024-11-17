@@ -535,6 +535,117 @@ video,
   place-content: center;
 }
 
+.button__fill-to-fill {
+  padding: 16px 24px;
+  font-family: inherit;
+  font-weight: 500;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  border: none;
+  overflow: hidden;
+  border-radius: 2rem;
+  z-index: 1;
+  background: hsl(57, 100%, 48%);
+  color: hsl(0, 0%, 4%);
+}
+.button__fill-to-fill:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  border-radius: 2rem;
+  background: hsl(217, 100%, 37%);
+  transition: all 0.3s ease;
+}
+.button__fill-to-fill:hover {
+  color: rgb(0, 0, 0);
+  color: hsl(0, 0%, 100%);
+}
+.button__fill-to-fill:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.button__fill-to-fill:hover .icon svg path {
+  stroke: #ffffff;
+}
+.button__fill-to-fill:active {
+  top: 2px;
+}
+.button__fill-to-fill .icon {
+  display: grid;
+  place-content: center;
+}
+.button__fill-to-fill .icon svg path {
+  stroke: #141414;
+  transition: all 0.4s ease;
+}
+
+.button__outline-to-fill {
+  padding: 16px 24px;
+  font-family: inherit;
+  font-weight: 500;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  border: none;
+  overflow: hidden;
+  border-radius: 2rem;
+  z-index: 1;
+  background: transparent;
+  color: hsl(0, 0%, 4%);
+  border: 2px solid #d9d9d9;
+}
+.button__outline-to-fill:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 2rem;
+  direction: rtl;
+  z-index: -1;
+  background: hsl(57, 100%, 48%);
+  transition: all 0.3s ease;
+}
+.button__outline-to-fill:hover {
+  color: hsl(0, 0%, 4%);
+}
+.button__outline-to-fill:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.button__outline-to-fill:active {
+  top: 2px;
+}
+.button__outline-to-fill .icon {
+  display: grid;
+  place-content: center;
+}
+.button__outline-to-fill .icon svg path {
+  stroke: hsl(0, 0%, 4%);
+  transition: all 0.4s ease;
+}
+
 .action-icon {
   width: 2.75rem;
   height: 2.75rem;
@@ -657,6 +768,40 @@ video,
   transform: translateX(0.5rem);
 }
 
+.tabs {
+  display: flex;
+  border-radius: 2rem;
+  background-color: #eee;
+  box-sizing: border-box;
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+  padding: 0.25rem;
+  width: fit-content;
+  font-size: 14px;
+}
+.tabs .tab {
+  padding: 10px 20px;
+  color: #000;
+  font-family: "Satoshi Variable";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  border-radius: 2rem;
+}
+.tabs .tab.active {
+  background-color: #fff;
+}
+
+.tab-content {
+  display: none;
+  color: #8a8a8a;
+}
+.tab-content.active {
+  display: block;
+}
+
 .header {
   width: 100%;
   z-index: 100;
@@ -774,7 +919,7 @@ video,
 .footer .give-breaker {
   width: 100%;
   background-color: #626262;
-  background-image: url("http://localhost:5173/assets/images/prayer-2544994_1920.jpg");
+  background-image: url("http://localhost:5173/assets/images/praise-worship.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -914,8 +1059,8 @@ video,
   justify-content: flex-end;
 }
 
-.hero {
-  margin-top: -103px;
+.give-options {
+  background-color: blue;
 }
 
 /*# sourceMappingURL=style.css.map */

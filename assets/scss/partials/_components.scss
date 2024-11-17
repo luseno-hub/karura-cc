@@ -103,6 +103,7 @@ video,
   max-width: 51.25rem;
 }
 
+// Button Styles start
 .button {
   display: flex;
   align-items: center;
@@ -151,6 +152,131 @@ video,
     place-content: center;
   }
 }
+
+.button__fill-to-fill {
+  padding: 16px 24px;
+  font-family: inherit;
+  font-weight: 500;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  border: none;
+  overflow: hidden;
+  border-radius: 2rem;
+  z-index: 1;
+  background: variables.$colors-primary-900;
+  color: variables.$colors-neutral-850;
+
+  &:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    border-radius: 2rem;
+    background: variables.$colors-secondary-900;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    color: rgb(0, 0, 0);
+    color: variables.$colors-neutral-100;
+
+    &:after {
+      left: auto;
+      right: 0;
+      width: 100%;
+    }
+
+    .icon svg path {
+      stroke: #ffffff;
+    }
+  }
+
+  &:active {
+    top: 2px;
+  }
+
+  .icon {
+    display: grid;
+    place-content: center;
+
+    svg path {
+      stroke: #141414;
+      transition: all 0.4s ease;
+    }
+  }
+}
+
+.button__outline-to-fill {
+  padding: 16px 24px;
+  font-family: inherit;
+  font-weight: 500;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  border: none;
+  overflow: hidden;
+  border-radius: 2rem;
+  z-index: 1;
+  background: transparent;
+  color: variables.$colors-neutral-850;
+  border: 2px solid #d9d9d9;
+
+  &:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 2rem;
+    direction: rtl;
+    z-index: -1;
+    background: variables.$colors-primary-900;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    color: variables.$colors-neutral-850;
+
+    &:after {
+      left: auto;
+      right: 0;
+      width: 100%;
+    }
+  }
+
+  &:active {
+    top: 2px;
+  }
+
+  .icon {
+    display: grid;
+    place-content: center;
+
+    svg path {
+      stroke: variables.$colors-neutral-850;
+      transition: all 0.4s ease;
+    }
+  }
+}
+// Button Styles End
 
 .action-icon {
   width: 2.75rem;
@@ -284,5 +410,43 @@ video,
         }
       }
     }
+  }
+}
+
+//Tabs navigation
+.tabs {
+  display: flex;
+  border-radius: 2rem;
+  background-color: #eee;
+  box-sizing: border-box;
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+  padding: 0.25rem;
+  width: fit-content;
+  font-size: 14px;
+
+  .tab {
+    padding: 10px 20px;
+    color: #000;
+    font-family: "Satoshi Variable";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    border-radius: 2rem;
+
+    &.active {
+      background-color: #fff;
+    }
+  }
+}
+
+.tab-content {
+  display: none;
+  color: #8a8a8a;
+
+  &.active {
+    display: block;
   }
 }
