@@ -67,8 +67,8 @@
 
   .give-breaker {
     width: 100%;
-    background-color: #626262;
-    background-image: url("http://localhost:5173/assets/images/praise-worship.jpg");
+    background-color: variables.$colors-secondary-900;
+    background-image: url("http://localhost:5173/assets/images/support.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -80,14 +80,17 @@
     align-items: center;
     justify-content: center;
 
-    h4 {
+    h2 {
       color: variables.$colors-neutral-150;
-      font-size: 2.25rem;
+      font-size: 4rem;
       font-style: normal;
       font-weight: 700;
       line-height: 88%;
       letter-spacing: -0.045rem;
       margin: 0 0 1rem 0;
+      max-width: 640px;
+      text-align: center;
+      text-transform: capitalize;
     }
 
     p {

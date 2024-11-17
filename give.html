@@ -141,47 +141,89 @@
       </section>
 
       <section class="give-options">
-        <div class="container">
+        <div class="container tabs-wrapper">
           <!-- Tabs start-->
           <div class="tabs">
             <div class="tab active" data-tab="automated">Automated Giving</div>
             <div class="tab" data-tab="offline">Offline Giving</div>
           </div>
           <div class="tab-content active" id="automated">
-            <h3>Option 1: Automated Giving</h3>
+            <h3 class="title">Option 1: Automated Giving</h3>
             <form action="">
               <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="Enter your email"
+                />
               </div>
               <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name" />
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="form-control"
+                  placeholder="Your name"
+                />
               </div>
               <div class="form-group">
-                <label for="number">Number</label>
-                <input type="number" name="number" id="number" />
+                <label for="number">Phone Number</label>
+                <input
+                  type="number"
+                  name="number"
+                  id="number"
+                  class="form-control"
+                  placeholder="e.g. 0712345678"
+                />
               </div>
               <div class="form-group">
-                <label for="number">Currency</label>
-                <select title="currency">
+                <label for="currency">Currency</label>
+                <select
+                  name="currency"
+                  id="currency"
+                  class="form-control select"
+                  required
+                >
+                  <option value="" disabled selected>Select currency</option>
                   <option value="KSH">KSH</option>
                   <option value="USD">USD</option>
                   <option value="BSP">BSP</option>
                 </select>
               </div>
+
               <div class="form-group">
-                <label for="number">Number</label>
-                <input type="number" name="number" id="number" />
+                <label for="purpose">Purpose</label>
+                <select
+                  name="purpose"
+                  id="purpose"
+                  class="form-control select"
+                  required
+                >
+                  <option value="" disabled selected>Select purpose</option>
+                  <option value="Tithe & Offering">Tithe & Offering</option>
+                  <option value="City On A Hill">City On A Hill</option>
+                  <option value="Karura Community Centre">
+                    Karura Community Centre
+                  </option>
+                </select>
               </div>
-              <div class="form-group">
-                <label for="number">Number</label>
-                <input type="number" name="number" id="number" />
-              </div>
+
+              <button
+                type="submit"
+                aria-label="Proceed to give"
+                class="submit button button__dark"
+              >
+                Proceed
+              </button>
             </form>
           </div>
+
           <div class="tab-content" id="offline">
-            This is the roffline content.
+            This is the offline content.
           </div>
           <!-- Tabs end-->
         </div>
@@ -189,6 +231,17 @@
     </main>
 
     <footer class="footer">
+      <section class="give-breaker">
+        <h2>Your giving is changing the world.</h2>
+        <p>
+          Your contribution supports our mission, outreach, and the spiritual
+          growth of many in your community and around the world.
+        </p>
+        <a href="#" class="archive-cta button button__primary">
+          Support the Mission
+        </a>
+      </section>
+
       <section class="featured-events">
         <div class="linked-title container">
           <h3 class="section-title">Featured events</h3>
@@ -227,15 +280,6 @@
             <span class="title">Redefining success: Highlights so far</span>
           </div>
         </div>
-      </section>
-
-      <section class="give-breaker">
-        <h4>Support</h4>
-        <p>
-          Your contribution supports our mission, outreach, and the spiritual
-          growth of many in your community and around the world.
-        </p>
-        <a href="#" class="archive-cta button button__primary"> Give </a>
       </section>
 
       <section class="dark-footer">

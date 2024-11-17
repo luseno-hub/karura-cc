@@ -311,9 +311,6 @@ template {
   font-family: "Gabarito", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
   font-optical-sizing: auto;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -326,18 +323,6 @@ template {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: hsl(213, 13%, 14%);
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
 .container {
   width: calc(100% - 200px);
   margin: 0 auto;
@@ -784,7 +769,7 @@ video,
   font-family: "Satoshi Variable";
   font-size: 1rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: normal;
   cursor: pointer;
   transition: all 0.15s ease-in-out;
@@ -918,8 +903,8 @@ video,
 }
 .footer .give-breaker {
   width: 100%;
-  background-color: #626262;
-  background-image: url("http://localhost:5173/assets/images/praise-worship.jpg");
+  background-color: hsl(217, 100%, 37%);
+  background-image: url("http://localhost:5173/assets/images/support.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -931,14 +916,17 @@ video,
   align-items: center;
   justify-content: center;
 }
-.footer .give-breaker h4 {
+.footer .give-breaker h2 {
   color: hsl(0, 0%, 98%);
-  font-size: 2.25rem;
+  font-size: 4rem;
   font-style: normal;
   font-weight: 700;
   line-height: 88%;
   letter-spacing: -0.045rem;
   margin: 0 0 1rem 0;
+  max-width: 640px;
+  text-align: center;
+  text-transform: capitalize;
 }
 .footer .give-breaker p {
   max-width: 49rem;
@@ -1060,7 +1048,44 @@ video,
 }
 
 .give-options {
-  background-color: blue;
+  padding: 9.375rem;
+}
+.give-options .tabs-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.give-options .title {
+  color: #242424;
+  text-align: center;
+  font-family: inherit;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 88%;
+  letter-spacing: -0.96px;
+}
+.give-options .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.give-options .form-group .form-control {
+  width: 100%;
+  border-radius: 3rem;
+  border: 1px solid #e4e4e4;
+  padding: 1rem;
+}
+.give-options .form-group .form-control::placeholder {
+  color: #aeaeae;
+}
+.give-options .form-group .form-control.select {
+  border-radius: 3rem;
+}
+.give-options .submit {
+  width: 100%;
+  margin-top: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
