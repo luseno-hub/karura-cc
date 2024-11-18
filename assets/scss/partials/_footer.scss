@@ -4,18 +4,18 @@
 .footer {
   width: 100%;
   max-width: 100%;
-  padding-top: 5rem;
   background-color: variables.$colors-accent-900;
 
   .featured-events {
     display: flex;
     flex-direction: column;
+    padding-top: 9.375rem;
 
     .linked-title {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 1.5px;
+      margin-bottom: 1.5rem;
     }
     .section-title {
       color: #242424;
@@ -32,24 +32,46 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      // padding: 0 6.25rem;
       width: 100%;
+      border-top: 1px solid variables.$colors-neutral-800;
+      position: relative;
 
       .featured-event-single {
         display: flex;
         flex-direction: column;
-        // align-items: start;
+        flex-grow: 1;
+        flex: 1;
         min-width: calc((100% - 15rem) / 3);
         width: calc((100% - 15rem) / 3);
         padding: 3.75rem;
 
+        .date {
+          color: #a4a4a8;
+          font-family: inherit;
+          font-size: 1rem;
+          font-weight: 500;
+          line-height: 1.5rem;
+          letter-spacing: -0.011rem;
+        }
+        .title {
+          color: variables.$colors-neutral-800;
+          font-family: inherit;
+          font-size: 1.5rem;
+          font-weight: 600;
+          line-height: 1.8rem;
+        }
+
         &:first-of-type {
-          padding: 3.75rem 3.75rem 3.75rem 6.25rem;
+          border-left: 1px solid variables.$colors-neutral-800;
+          border-right: 1px solid variables.$colors-neutral-800;
         }
 
         &:last-of-type {
-          background-color: red;
-          padding: 3.75rem 6.25rem 3.75rem 3.75rem;
+          background-color: variables.$colors-neutral-850;
+
+          .title {
+            color: #faf8f0;
+          }
         }
 
         .image {
@@ -67,8 +89,8 @@
 
   .give-breaker {
     width: 100%;
-    background-color: #626262;
-    background-image: url("http://localhost:5173/assets/images/praise-worship.jpg");
+    background-color: variables.$colors-secondary-900;
+    background-image: url("http://localhost:5173/assets/images/support.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -80,14 +102,17 @@
     align-items: center;
     justify-content: center;
 
-    h4 {
+    h2 {
       color: variables.$colors-neutral-150;
-      font-size: 2.25rem;
+      font-size: 4rem;
       font-style: normal;
       font-weight: 700;
       line-height: 88%;
       letter-spacing: -0.045rem;
-      margin: 0 0 1rem 0;
+      margin: 0 0 3rem 0;
+      max-width: 640px;
+      text-align: center;
+      text-transform: capitalize;
     }
 
     p {

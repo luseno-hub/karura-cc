@@ -1,5 +1,11 @@
 @use "./variables";
 
+.hero {
+  display: grid;
+  place-content: center;
+  margin-top: -104px;
+}
+
 .media-card {
   width: 100%;
   height: 100vh;
@@ -235,8 +241,8 @@ video,
   border-radius: 2rem;
   z-index: 1;
   background: transparent;
-  color: variables.$colors-neutral-850;
-  border: 2px solid #d9d9d9;
+  color: variables.$colors-neutral-150;
+  border: 2px solid variables.$colors-neutral-150;
 
   &:after {
     position: absolute;
@@ -302,33 +308,6 @@ video,
   }
   &__out-of-stock {
     background-color: #eb001b;
-  }
-}
-
-.swiper {
-  width: 100%;
-  height: auto;
-
-  .title-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .swiper-navs {
-    display: flex;
-    gap: 1.5rem;
-
-    .swiper-button-prev,
-    .swiper-button-next {
-      position: static;
-      margin-top: 0;
-      color: #000;
-
-      &:after {
-        font-size: unset;
-      }
-    }
   }
 }
 
@@ -417,7 +396,7 @@ video,
 .tabs {
   display: flex;
   border-radius: 2rem;
-  background-color: #eee;
+  background-color: variables.$colors-secondary-100;
   box-sizing: border-box;
   box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
   padding: 0.25rem;
@@ -426,27 +405,70 @@ video,
 
   .tab {
     padding: 10px 20px;
-    color: #000;
+    color: variables.$colors-neutral-850;
     font-family: "Satoshi Variable";
     font-size: 1rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: normal;
     cursor: pointer;
     transition: all 0.15s ease-in-out;
     border-radius: 2rem;
 
     &.active {
-      background-color: #fff;
+      background-color: variables.$colors-secondary-900;
+      color: variables.$colors-primary-900;
     }
   }
 }
 
 .tab-content {
+  width: 100%;
   display: none;
   color: #8a8a8a;
 
   &.active {
     display: block;
+  }
+}
+
+.bn {
+  color: #808080;
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.col-3__content-grid {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+
+  &--single {
+    width: calc((100% - 4rem) / 3);
+
+    &__icon {
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      border-bottom: 1px solid variables.$colors-neutral-800;
+    }
+
+    .title__large {
+      color: variables.$colors-neutral-800;
+      margin-bottom: 1rem;
+      text-transform: capitalize;
+    }
+
+    .body-text {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
 }
