@@ -8,9 +8,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: multiply;
-    height: 100vh;
+    height: 80vh;
 
     h2 {
+      margin-top: 8rem;
       margin-bottom: 2.625rem;
       color: variables.$colors-secondary-100;
     }
@@ -26,6 +27,9 @@
   }
 
   .journey {
+    width: 100%;
+    background-color: variables.$colors-accent-900;
+
     .container {
       display: flex;
       flex-direction: column;
@@ -36,12 +40,105 @@
     }
 
     .intro-text {
-      color: #808080;
+      color: variables.$colors-accent-600;
       text-align: center;
       font-family: inherit;
       font-size: 1.25rem;
       font-weight: 400;
       line-height: 160%;
+      max-width: 640px;
+    }
+  }
+
+  .s-o-f {
+    padding: 4.69rem 0;
+    width: 100%;
+    background-color: variables.$colors-accent-900;
+
+    .body-text {
+      color: variables.$colors-accent-600;
+    }
+  }
+
+  .leadership {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    background-color: variables.$colors-neutral-700;
+    background-image: url("http://localhost:5173/assets/images/outreach.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    height: 50vh;
+
+    h3 {
+      color: variables.$colors-primary-900;
+      text-align: center;
+      text-transform: capitalize;
+      font-family: inherit;
+      font-weight: 700;
+      line-height: 100%;
+      letter-spacing: -1.12px;
+    }
+
+    p {
+      text-align: center;
+      max-width: 640px;
+      color: #fff;
+      text-align: center;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 140%;
+    }
+
+    a {
+      text-align: center;
+    }
+  }
+
+  .core-values {
+    background-color: variables.$colors-neutral-850;
+    padding: 9.375rem 0;
+
+    h3 {
+      width: 100%;
+      text-align: center;
+      color: variables.$colors-neutral-150;
+      margin-bottom: 3rem;
+      text-transform: capitalize;
+    }
+
+    &__grid {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+
+      &--single {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        width: calc((100% - 4rem) / 3);
+        padding: 2rem;
+
+        &_title {
+          color: variables.$colors-neutral-200;
+          text-align: center;
+          text-transform: capitalize;
+        }
+
+        &_body {
+          color: variables.$colors-neutral-650;
+          text-align: center;
+        }
+      }
     }
   }
 }

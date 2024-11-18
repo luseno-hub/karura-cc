@@ -8,10 +8,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: multiply;
-    height: 50vh;
+    height: 60vh;
   }
 
   h2 {
+    margin-top: 104px;
     margin-bottom: 2.625rem;
     color: variables.$colors-primary-900;
   }
@@ -35,6 +36,7 @@
 
 .give-options {
   padding: 9.375rem;
+  background-color: variables.$colors-accent-900;
 
   .tabs-wrapper {
     display: flex;
@@ -44,7 +46,6 @@
 
     .title__large {
       color: variables.$colors-neutral-800;
-      margin-bottom: 1rem;
     }
 
     .title__small {

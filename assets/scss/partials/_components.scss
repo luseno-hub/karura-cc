@@ -241,8 +241,8 @@ video,
   border-radius: 2rem;
   z-index: 1;
   background: transparent;
-  color: variables.$colors-neutral-850;
-  border: 2px solid #d9d9d9;
+  color: variables.$colors-neutral-150;
+  border: 2px solid variables.$colors-neutral-150;
 
   &:after {
     position: absolute;
@@ -457,7 +457,13 @@ video,
       flex-direction: row;
       align-items: flex-start;
       justify-content: flex-start;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid variables.$colors-neutral-800;
+    }
+
+    .title__large {
+      color: variables.$colors-neutral-800;
+      margin-bottom: 1rem;
+      text-transform: capitalize;
     }
 
     .body-text {
