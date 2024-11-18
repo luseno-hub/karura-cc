@@ -45,14 +45,33 @@
         width: calc((100% - 15rem) / 3);
         padding: 3.75rem;
 
+        .date {
+          color: #a4a4a8;
+          font-family: inherit;
+          font-size: 1rem;
+          font-weight: 500;
+          line-height: 1.5rem;
+          letter-spacing: -0.011rem;
+        }
+        .title {
+          color: variables.$colors-neutral-800;
+          font-family: inherit;
+          font-size: 1.5rem;
+          font-weight: 600;
+          line-height: 1.8rem;
+        }
+
         &:first-of-type {
-          padding: 3.75rem 3.75rem 3.75rem 6.25rem;
+          border-left: 1px solid variables.$colors-neutral-800;
           border-right: 1px solid variables.$colors-neutral-800;
         }
 
         &:last-of-type {
-          background-color: variables.$colors-neutral-800;
-          padding: 3.75rem 6.25rem 3.75rem 3.75rem;
+          background-color: variables.$colors-neutral-850;
+
+          .title {
+            color: #faf8f0;
+          }
         }
 
         .image {

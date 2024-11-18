@@ -443,6 +443,7 @@ h4 {
 .hero {
   display: grid;
   place-content: center;
+  margin-top: -104px;
 }
 
 .media-card {
@@ -965,13 +966,30 @@ video,
   width: calc((100% - 15rem) / 3);
   padding: 3.75rem;
 }
+.footer .featured-events .content-grid .featured-event-single .date {
+  color: #a4a4a8;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: -0.011rem;
+}
+.footer .featured-events .content-grid .featured-event-single .title {
+  color: hsl(213, 13%, 14%);
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.8rem;
+}
 .footer .featured-events .content-grid .featured-event-single:first-of-type {
-  padding: 3.75rem 3.75rem 3.75rem 6.25rem;
+  border-left: 1px solid hsl(213, 13%, 14%);
   border-right: 1px solid hsl(213, 13%, 14%);
 }
 .footer .featured-events .content-grid .featured-event-single:last-of-type {
-  background-color: hsl(213, 13%, 14%);
-  padding: 3.75rem 6.25rem 3.75rem 3.75rem;
+  background-color: hsl(0, 0%, 4%);
+}
+.footer .featured-events .content-grid .featured-event-single:last-of-type .title {
+  color: #faf8f0;
 }
 .footer .featured-events .content-grid .featured-event-single .image {
   width: 100%;
@@ -1125,6 +1143,44 @@ video,
   gap: 1.5rem;
   align-items: center;
   justify-content: flex-end;
+}
+
+.about .hero {
+  background-color: hsl(217, 100%, 37%);
+  background-image: url("http://localhost:5173/assets/images/outreach.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  height: 100vh;
+}
+.about .hero h2 {
+  margin-bottom: 2.625rem;
+  color: hsl(217, 100%, 96%);
+}
+.about .hero .nudge-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  animation: bounce 2s infinite ease-in-out;
+}
+.about .journey .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 9.38rem 0 4.69rem 0;
+}
+.about .journey .intro-text {
+  color: #808080;
+  text-align: center;
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 160%;
 }
 
 .hero.give {

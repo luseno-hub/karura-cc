@@ -1,0 +1,47 @@
+@use "./variables";
+
+.about {
+  .hero {
+    background-color: variables.$colors-secondary-900;
+    background-image: url("http://localhost:5173/assets/images/outreach.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    height: 100vh;
+
+    h2 {
+      margin-bottom: 2.625rem;
+      color: variables.$colors-secondary-100;
+    }
+
+    .nudge-down {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5rem;
+      animation: bounce 2s infinite ease-in-out;
+    }
+  }
+
+  .journey {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      padding: 9.38rem 0 4.69rem 0;
+    }
+
+    .intro-text {
+      color: #808080;
+      text-align: center;
+      font-family: inherit;
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 160%;
+    }
+  }
+}
