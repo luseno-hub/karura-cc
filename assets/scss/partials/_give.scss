@@ -10,28 +10,61 @@
     background-blend-mode: multiply;
     height: 50vh;
   }
+
+  h2 {
+    margin-bottom: 2.625rem;
+    color: variables.$colors-primary-900;
+  }
+
+  p {
+    max-width: 49rem;
+    margin-bottom: 2.625rem;
+    color: hsl(0, 0%, 96%);
+    text-align: center;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  .nudge-down {
+    display: block;
+    animation: bounce 2s infinite ease-in-out;
+  }
 }
 
 .give-options {
   padding: 9.375rem;
-  // background-color: blue;
 
   .tabs-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+
+    .title__large {
+      color: variables.$colors-neutral-800;
+      margin-bottom: 1rem;
+    }
+
+    .title__small {
+      color: variables.$colors-neutral-800;
+    }
   }
 
   .title {
     color: #242424;
+    margin: 2rem 0;
     text-align: center;
-    font-family: inherit;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 88%;
-    letter-spacing: -0.96px;
+  }
+
+  .form-give {
+    padding: 2rem;
+    width: 100%;
+    max-width: 450px;
+    background-color: variables.$colors-neutral-150;
+    border-radius: 0.5rem;
+    margin: 0 auto;
   }
 
   .form-group {
