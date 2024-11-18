@@ -1150,6 +1150,94 @@ video,
   justify-content: flex-end;
 }
 
+.hero {
+  margin-top: -103px;
+}
+
+.focus {
+  width: 100px;
+}
+
+.hero.give {
+  background-color: hsl(217, 100%, 37%);
+  background-image: url("http://localhost:5173/assets/images/outreach.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  height: 60vh;
+}
+.hero h2 {
+  margin-top: 104px;
+  margin-bottom: 2.625rem;
+  color: hsl(57, 100%, 48%);
+}
+.hero p {
+  max-width: 49rem;
+  margin-bottom: 2.625rem;
+  color: hsl(0, 0%, 96%);
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.hero .nudge-down {
+  display: block;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.give-options {
+  padding: 9.375rem;
+  background-color: hsl(48, 100%, 92%);
+}
+.give-options .tabs-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.give-options .tabs-wrapper .title__large {
+  color: hsl(213, 13%, 14%);
+}
+.give-options .tabs-wrapper .title__small {
+  color: hsl(213, 13%, 14%);
+}
+.give-options .title {
+  color: #242424;
+  margin: 2rem 0;
+  text-align: center;
+}
+.give-options .form-give {
+  padding: 2rem;
+  width: 100%;
+  max-width: 450px;
+  background-color: hsl(0, 0%, 98%);
+  border-radius: 0.5rem;
+  margin: 0 auto;
+}
+.give-options .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.give-options .form-group .form-control {
+  width: 100%;
+  border-radius: 3rem;
+  border: 1px solid #e4e4e4;
+  padding: 1rem;
+}
+.give-options .form-group .form-control::placeholder {
+  color: #aeaeae;
+}
+.give-options .form-group .form-control.select {
+  border-radius: 3rem;
+}
+.give-options .submit {
+  width: 100%;
+  margin-top: 2rem;
+}
+
 .about .hero {
   background-color: hsl(217, 100%, 37%);
   background-image: url("http://localhost:5173/assets/images/outreach.jpg");
@@ -1272,86 +1360,6 @@ video,
 .about .core-values__grid--single_body {
   color: hsl(0, 0%, 50%);
   text-align: center;
-}
-
-.hero.give {
-  background-color: hsl(217, 100%, 37%);
-  background-image: url("http://localhost:5173/assets/images/outreach.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-blend-mode: multiply;
-  height: 60vh;
-}
-.hero h2 {
-  margin-top: 104px;
-  margin-bottom: 2.625rem;
-  color: hsl(57, 100%, 48%);
-}
-.hero p {
-  max-width: 49rem;
-  margin-bottom: 2.625rem;
-  color: hsl(0, 0%, 96%);
-  text-align: center;
-  font-size: 1.2rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%;
-}
-.hero .nudge-down {
-  display: block;
-  animation: bounce 2s infinite ease-in-out;
-}
-
-.give-options {
-  padding: 9.375rem;
-  background-color: hsl(48, 100%, 92%);
-}
-.give-options .tabs-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-.give-options .tabs-wrapper .title__large {
-  color: hsl(213, 13%, 14%);
-}
-.give-options .tabs-wrapper .title__small {
-  color: hsl(213, 13%, 14%);
-}
-.give-options .title {
-  color: #242424;
-  margin: 2rem 0;
-  text-align: center;
-}
-.give-options .form-give {
-  padding: 2rem;
-  width: 100%;
-  max-width: 450px;
-  background-color: hsl(0, 0%, 98%);
-  border-radius: 0.5rem;
-  margin: 0 auto;
-}
-.give-options .form-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-}
-.give-options .form-group .form-control {
-  width: 100%;
-  border-radius: 3rem;
-  border: 1px solid #e4e4e4;
-  padding: 1rem;
-}
-.give-options .form-group .form-control::placeholder {
-  color: #aeaeae;
-}
-.give-options .form-group .form-control.select {
-  border-radius: 3rem;
-}
-.give-options .submit {
-  width: 100%;
-  margin-top: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
