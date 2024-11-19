@@ -315,7 +315,7 @@ video,
   width: 100%;
   background-color: variables.$colors-accent-900;
   padding: 9.38rem 0;
-  border-top: 1px solid #242424;
+  // border-top: 1px solid #242424;
 
   .layout {
     display: flex;
@@ -470,5 +470,22 @@ video,
       width: 100%;
       margin-bottom: 2rem;
     }
+  }
+}
+
+.col-2__grid {
+  display: flex;
+  flex-direction: row;
+  // align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 4rem;
+
+  &--icon-left {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    width: calc((100% - 4rem) / 2);
   }
 }

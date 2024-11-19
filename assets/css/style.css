@@ -727,7 +727,6 @@ video,
   width: 100%;
   background-color: hsl(48, 100%, 92%);
   padding: 9.38rem 0;
-  border-top: 1px solid #242424;
 }
 .content-list .layout {
   display: flex;
@@ -866,6 +865,21 @@ video,
 .col-3__content-grid--single .body-text {
   width: 100%;
   margin-bottom: 2rem;
+}
+
+.col-2__grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+.col-2__grid--icon-left {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  width: calc((100% - 4rem) / 2);
 }
 
 .header {
@@ -1240,6 +1254,15 @@ video,
 }
 .about .leadership a {
   text-align: center;
+}
+.about .strategic-plan {
+  padding: 9.325rem 0;
+}
+.about .col-2__modified {
+  padding-bottom: 9.325rem;
+}
+.about .col-2__modified .col-3__content-grid--single {
+  width: calc((100% - 2rem) / 2);
 }
 .about .core-values {
   background-color: hsl(0, 0%, 4%);

@@ -100,6 +100,18 @@
     }
   }
 
+  .strategic-plan {
+    padding: 9.325rem 0;
+  }
+
+  .col-2__modified {
+    padding-bottom: 9.325rem;
+
+    .col-3__content-grid--single {
+      width: calc((100% - 2rem) / 2);
+    }
+  }
+
   .core-values {
     background-color: variables.$colors-neutral-850;
     padding: 9.375rem 0;
