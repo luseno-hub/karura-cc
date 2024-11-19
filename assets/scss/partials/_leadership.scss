@@ -1,0 +1,30 @@
+@use "./variables";
+
+.leadership {
+  &__navigation {
+    position: sticky;
+    top: 104px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.5rem;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      background: variables.$colors-neutral-250;
+    }
+  }
+}

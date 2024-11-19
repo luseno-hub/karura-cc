@@ -440,6 +440,11 @@ h4 {
   gap: 0.5em;
 }
 
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
 .hero {
   display: grid;
   place-content: center;
@@ -580,6 +585,10 @@ video,
   background-color: hsl(0, 0%, 0%);
   color: hsl(0, 0%, 100%);
   border: 1px solid hsl(0, 0%, 0%);
+}
+.button__small {
+  height: 2rem;
+  padding: 0.5rem 0.875rem;
 }
 .button .icon {
   display: grid;
@@ -1379,6 +1388,30 @@ video,
 .give-options .submit {
   width: 100%;
   margin-top: 2rem;
+}
+
+.leadership__navigation {
+  position: sticky;
+  top: 104px;
+}
+.leadership__navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+.leadership__navigation li {
+  margin: 0;
+  padding: 0;
+}
+.leadership__navigation a {
+  text-decoration: none;
+  color: inherit;
+  background: hsl(0, 0%, 95%);
 }
 
 /*# sourceMappingURL=style.css.map */

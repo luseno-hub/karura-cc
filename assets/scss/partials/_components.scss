@@ -153,6 +153,11 @@ video,
     border: 1px solid variables.$colors-neutral-900;
   }
 
+  &__small {
+    height: 2rem;
+    padding: 0.5rem 0.875rem;
+  }
+
   .icon {
     display: grid;
     place-content: center;
