@@ -307,6 +307,11 @@ template {
   display: none;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 :root {
   font-family: "Gabarito", system-ui, Helvetica, Arial, sans-serif;
   line-height: 1.6;
@@ -422,10 +427,10 @@ h4 {
 }
 @keyframes bounce {
   0%, 100% {
-    transform: translateY(0); /* Start and end at the original position */
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(20px); /* Move downward */
+    transform: translateY(20px);
   }
 }
 .inline-center {
@@ -449,6 +454,38 @@ h4 {
   display: grid;
   place-content: center;
   margin-top: -104px;
+  background-color: hsl(217, 100%, 37%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  height: 80vh;
+}
+.hero h2 {
+  margin-top: 8rem;
+  color: hsl(217, 100%, 96%);
+}
+.hero p {
+  max-width: 49rem;
+  margin: 0;
+  color: hsl(0, 0%, 96%);
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.hero .nudge-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.675rem;
+  font-family: inherit;
+  margin-top: 5rem;
+  animation: bounce 2s infinite ease-in-out;
 }
 
 .media-card {
@@ -459,26 +496,6 @@ h4 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.media-card__title {
-  font-size: 5rem;
-  margin: 0;
-  color: #242424;
-  text-align: center;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 88%;
-  letter-spacing: -0.1rem;
-}
-.media-card__title-h1 {
-  font-size: 10rem;
-  letter-spacing: -0.4rem;
-  color: hsl(0, 0%, 98%);
-}
-.media-card__title-h2 {
-  font-size: 5rem;
-  letter-spacing: -0.2rem;
-  color: hsl(0, 0%, 98%);
 }
 .media-card__title .smiley {
   width: 6rem;
@@ -507,7 +524,6 @@ h4 {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-top: 2.75rem;
 }
 
 .video-container,
@@ -545,6 +561,11 @@ video,
   color: white;
   text-align: center;
   max-width: 51.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4rem;
 }
 
 .button {
@@ -1178,26 +1199,7 @@ video,
 }
 
 .about .hero {
-  background-color: hsl(217, 100%, 37%);
   background-image: url("http://localhost:5173/assets/images/outreach.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-blend-mode: multiply;
-  height: 80vh;
-}
-.about .hero h2 {
-  margin-top: 8rem;
-  margin-bottom: 2.625rem;
-  color: hsl(217, 100%, 96%);
-}
-.about .hero .nudge-down {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 5rem;
-  animation: bounce 2s infinite ease-in-out;
 }
 .about .journey {
   width: 100%;
@@ -1311,32 +1313,7 @@ video,
 }
 
 .hero.give {
-  background-color: hsl(217, 100%, 37%);
   background-image: url("http://localhost:5173/assets/images/outreach.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-blend-mode: multiply;
-  height: 60vh;
-}
-.hero h2 {
-  margin-top: 104px;
-  margin-bottom: 2.625rem;
-  color: hsl(57, 100%, 48%);
-}
-.hero p {
-  max-width: 49rem;
-  margin-bottom: 2.625rem;
-  color: hsl(0, 0%, 96%);
-  text-align: center;
-  font-size: 1.2rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%;
-}
-.hero .nudge-down {
-  display: block;
-  animation: bounce 2s infinite ease-in-out;
 }
 
 .give-options {
@@ -1485,22 +1462,110 @@ video,
 .leadership__grid--single__name {
   color: #000;
   font-family: Gabarito;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 88%; /* 21.12px */
   letter-spacing: -0.48px;
-  margin-top: 24px;
+  margin-top: 20px;
 }
 .leadership__grid--single__position {
   color: #898989;
   font-family: Gabarito;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 88%; /* 17.6px */
   letter-spacing: -0.4px;
   margin-top: 8px;
+}
+
+.focus .rich-content {
+  padding: 9.325rem 1rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.focus .rich-content__subject-content {
+  padding: 4rem 0;
+}
+.focus .rich-content__subject-content h1 {
+  font-size: 32px;
+  font-family: inherit;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: hsl(213, 13%, 14%);
+  font-style: normal;
+  line-height: 120%;
+}
+.focus .rich-content__subject-content h2 {
+  font-size: 24px;
+  font-family: inherit;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: hsl(213, 13%, 14%);
+  font-style: normal;
+  line-height: 120%;
+}
+.focus .rich-content__subject-content h3 {
+  font-size: 20px;
+  font-family: inherit;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: hsl(213, 13%, 14%);
+  font-style: normal;
+  line-height: 120%;
+}
+.focus .rich-content__subject-content h4 {
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: hsl(213, 13%, 14%);
+  font-style: normal;
+  line-height: 120%;
+}
+.focus .rich-content__subject-content p {
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: #808080;
+  font-style: normal;
+  line-height: 180%;
+}
+.focus .rich-content__subject-content blockquote {
+  background-color: hsl(0, 0%, 96%);
+  color: hsl(217, 100%, 37%);
+  padding: 2rem 2rem 2rem 4rem;
+  border-left: 4px solid hsl(57, 100%, 48%);
+  margin-bottom: 2rem;
+}
+.focus .rich-content__subject-content a {
+  color: hsl(57, 100%, 48%);
+  text-decoration: underline;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.focus .rich-content__subject-content img,
+.focus .rich-content__subject-content video {
+  width: 100%;
+  height: auto;
+}
+.focus .rich-content__subject-content ol {
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style-position: inside;
+  margin-bottom: 2rem;
+}
+.focus .rich-content__subject-content ol li {
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 400;
+  color: #808080;
+  font-style: normal;
 }
 
 /*# sourceMappingURL=style.css.map */

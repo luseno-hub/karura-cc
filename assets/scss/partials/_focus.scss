@@ -1,0 +1,102 @@
+@use "./variables";
+
+.focus {
+  .rich-content {
+    padding: 9.325rem 1rem;
+    max-width: 640px;
+    margin: 0 auto;
+
+    &__subject-content {
+      padding: 4rem 0;
+
+      h1 {
+        font-size: 32px;
+        font-family: inherit;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: variables.$colors-neutral-800;
+        font-style: normal;
+        line-height: 120%;
+      }
+
+      h2 {
+        font-size: 24px;
+        font-family: inherit;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: variables.$colors-neutral-800;
+        font-style: normal;
+        line-height: 120%;
+      }
+
+      h3 {
+        font-size: 20px;
+        font-family: inherit;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: variables.$colors-neutral-800;
+        font-style: normal;
+        line-height: 120%;
+      }
+
+      h4 {
+        font-size: 16px;
+        font-family: inherit;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: variables.$colors-neutral-800;
+        font-style: normal;
+        line-height: 120%;
+      }
+
+      p {
+        font-size: 16px;
+        font-family: inherit;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        color: #808080;
+        font-style: normal;
+        line-height: 180%;
+      }
+
+      blockquote {
+        background-color: variables.$colors-neutral-200;
+        color: variables.$colors-secondary-900;
+        padding: 2rem 2rem 2rem 4rem;
+        border-left: 4px solid variables.$colors-primary-900;
+        margin-bottom: 2rem;
+      }
+
+      a {
+        color: variables.$colors-primary-900;
+        text-decoration: underline;
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+
+      img,
+      video {
+        width: 100%;
+        height: auto;
+      }
+
+      ol {
+        margin: 0;
+        padding-left: 1.5rem;
+        list-style-position: inside;
+        margin-bottom: 2rem;
+
+        li {
+          margin-bottom: 0.5rem;
+          font-size: 16px;
+          font-family: inherit;
+          font-weight: 400;
+          color: #808080;
+          font-style: normal;
+        }
+      }
+    }
+  }
+}
