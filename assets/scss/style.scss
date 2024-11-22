@@ -1,5 +1,6 @@
 @use "../../node_modules/normalize.css/normalize.css";
 
+@use "../scss/partials/mixins";
 @use "../scss/partials/global";
 @use "../scss/partials/components";
 @use "../scss/partials/header";

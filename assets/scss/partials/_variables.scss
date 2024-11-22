@@ -25,9 +25,12 @@ $colors-accent-800: hsl(49, 64%, 73%);
 $colors-accent-700: hsl(49, 44%, 51%);
 $colors-accent-600: hsl(49, 58%, 39%);
 
-// --------- BREAKPOINTS -------------------
-$breakpoints: (
-  small: 576px,
-  medium: 768px,
-  large: 1200px
-);
+// // --------- BREAKPOINTS -------------------
+// $breakpoints: (
+//   small: 576px,
+//   medium: 768px,
+//   large: 1200px  /* For screens >= 1200px */
+// );
+// @include mixins.respond-to(large) {
+//   flex-direction: row;
+// }

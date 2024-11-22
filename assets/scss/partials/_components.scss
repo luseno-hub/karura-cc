@@ -1,4 +1,6 @@
+@use "./global";
 @use "./variables";
+@use "./mixins";
 
 .hero {
   display: grid;
@@ -342,12 +344,18 @@ video,
 
   .layout {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: start;
     justify-content: space-between;
     gap: 4rem;
     border-top: 1px solid variables.$colors-accent-800;
     padding-top: 2rem;
+
+    @include mixins.respond-to(large) {
+      flex-direction: row;
+      align-items: start;
+      justify-content: space-between;
+    }
   }
 
   &__title {

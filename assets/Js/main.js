@@ -3,6 +3,11 @@ const tabs = document.querySelectorAll(".tab");
 const contents = document.querySelectorAll(".tab-content");
 const swiperContainer = document.querySelector(".swiper");
 
+// ---------------> Hamburger menu <----------------
+document.querySelector("#menu-toggle").addEventListener("click", function () {
+  this.classList.toggle("open");
+});
+
 // ---------------> Tabs <----------------
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
