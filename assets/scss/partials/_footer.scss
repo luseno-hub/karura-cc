@@ -48,7 +48,7 @@
         .date {
           color: #a4a4a8;
           font-family: inherit;
-          font-size: 1rem;
+          font-size: 0.875rem;
           font-weight: 500;
           line-height: 1.5rem;
           letter-spacing: -0.011rem;
@@ -56,7 +56,7 @@
         .title {
           color: variables.$colors-neutral-800;
           font-family: inherit;
-          font-size: 1.5rem;
+          font-size: 1.25rem;
           font-weight: 600;
           line-height: 1.8rem;
         }
@@ -172,7 +172,7 @@
       .footer-hrefs {
         color: variables.$colors-neutral-650;
         text-decoration: none;
-        font-size: 1rem;
+        font-size: 0.875rem;
         font-weight: 400;
       }
 
@@ -193,6 +193,47 @@
           gap: 1rem;
           align-items: center;
         }
+
+        &__map {
+          display: flex;
+          gap: 1rem;
+          align-items: flex-start;
+
+          p {
+            color: variables.$colors-neutral-650;
+            font-size: 0.875rem;
+            margin: 0;
+          }
+        }
+
+        .certifications {
+          margin-top: 2rem;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 2rem;
+
+          img {
+            width: 80px;
+            height: auto;
+          }
+        }
+      }
+
+      .company {
+        &__list-wrapper {
+          margin-bottom: 2rem;
+
+          &--single {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: variables.$colors-neutral-650;
+            font-family: inherit;
+            font-size: 0.875rem;
+          }
+        }
       }
     }
 
@@ -211,6 +252,7 @@
           border: none;
           background-color: transparent;
           height: 100%;
+          color: variables.$colors-neutral-400;
 
           &:focus {
             outline: none;
@@ -229,7 +271,7 @@
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid #222222;
-    color: #626262;
+    color: variables.$colors-neutral-650;
     padding: 2rem 0;
 
     .legal {
@@ -239,10 +281,11 @@
       gap: 2rem;
       color: variables.$colors-neutral-400;
 
+      p,
       a {
-        color: variables.$colors-neutral-400;
+        color: variables.$colors-neutral-650;
         text-decoration: none;
-        font-size: 1rem;
+        font-size: 0.875rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;

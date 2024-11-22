@@ -11,6 +11,11 @@
       rel="stylesheet"
     />
     <!-- font import ends -->
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <link rel="stylesheet" href="./assets/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,7 +25,7 @@
     <header class="header">
       <div class="container header__layout">
         <div class="logo">
-          <img src="./assets/images/logo_color.png" alt="brand logo" />
+          <img src="./assets/images/kcc-logo-colored.svg" alt="brand logo" />
         </div>
 
         <nav class="header__navbar">
@@ -86,16 +91,63 @@
             <li class="header__navbar-links"><a href="#">Give</a></li>
             <li class="header__navbar-links">
               <a href="#" class="inline-align-center">
-                <span class="inline-center"
-                  ><img src="./assets/icons/more.svg" alt="arrow down"
-                /></span>
+                <span class="inline-center">
+                  <svg
+                    width="16"
+                    height="4"
+                    viewBox="0 0 16 4"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.9959 2H8.00488"
+                      stroke="#141B34"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M13.9998 2H14.0088"
+                      stroke="#141B34"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M1.99981 2H2.00879"
+                      stroke="#141B34"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
                 More
               </a>
 
               <ul class="dropdown">
                 <li>
-                  <a href="#">Resources</a>
-                  <ul class="dropdown">
+                  <a href="#" class="inline-align-center"
+                    >Resources
+                    <span class="inline-center">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5 7.5L9.41074 11.9107C9.68852 12.1885 9.82741 12.3274 10 12.3274C10.1726 12.3274 10.3115 12.1885 10.5893 11.9107L15 7.5"
+                          stroke="#141B34"
+                          stroke-width="1.25"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                  <ul class="inner-dropdown">
                     <li><a href="#">Weekly bulletin</a></li>
                     <li><a href="#">Newsletter</a></li>
                     <li><a href="#">Downloads</a></li>
@@ -105,8 +157,27 @@
                   </ul>
                 </li>
                 <li>
-                  <a href="#">Media</a>
-                  <ul class="dropdown">
+                  <a href="#" class="inline-align-center"
+                    >Media
+                    <span class="inline-center">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5 7.5L9.41074 11.9107C9.68852 12.1885 9.82741 12.3274 10 12.3274C10.1726 12.3274 10.3115 12.1885 10.5893 11.9107L15 7.5"
+                          stroke="#141B34"
+                          stroke-width="1.25"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                  <ul class="inner-dropdown">
                     <li><a href="#">Karura Voices</a></li>
                     <li><a href="#">Podcasts</a></li>
                   </ul>
@@ -114,20 +185,34 @@
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Shop</a></li>
                 <li><a href="#">Staff login</a></li>
-                <li><a href="#">Outreach</a></li>
-                <li><a href="#">Compassion/ Social ministry</a></li>
-                <li><a href="#">Leadership & Multiplication</a></li>
-                <li><a href="#">Communications ministry</a></li>
               </ul>
             </li>
           </ul>
         </nav>
 
-        <div class="search">
-          <span
-            ><img src="./assets/icons/arrow-down.svg" alt="arrow down"
-          /></span>
-        </div>
+        <span class="inline-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 22 22"
+            fill="none"
+          >
+            <path
+              d="M16.5 16.75L21 21.25"
+              stroke="#141B34"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M19 10.25C19 5.27944 14.9706 1.25 10 1.25C5.02944 1.25 1 5.27944 1 10.25C1 15.2206 5.02944 19.25 10 19.25C14.9706 19.25 19 15.2206 19 10.25Z"
+              stroke="#141B34"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
       </div>
     </header>
 
@@ -418,6 +503,24 @@
                   </p>
                 </li>
               </ul>
+
+              <div class="certifications">
+                <img
+                  src="./assets/images/accreditation.png"
+                  alt="accreditation"
+                />
+                <img src="./assets/images/charter.png" alt="charter" />
+              </div>
+
+              <a
+                href="#"
+                class="button button__secondary-outline-white staff-login"
+              >
+                Staff login
+                <span class="inline-center"
+                  ><img src="./assets/icons/login.svg" alt="login"
+                /></span>
+              </a>
             </div>
             <div class="quick-links">
               <p class="column-title">Quick Links</p>
@@ -448,31 +551,23 @@
                 </li>
                 <li><a href="#" class="footer-hrefs">testimonies</a></li>
               </ul>
-              <a
-                href="#"
-                class="button button__secondary-outline-white staff-login"
-              >
-                Staff login
-                <span class="inline-center"
-                  ><img src="./assets/icons/login.svg" alt="login"
-                /></span>
-              </a>
             </div>
             <div class="company">
               <p class="column-title">Service Times</p>
-              <ul>
-                <li>
+              <ul class="company__list-wrapper">
+                <li class="company__list-wrapper--single">
                   <span>1st Service (Adults, Youth & Children)</span
                   ><span>09:00 AM</span>
                 </li>
-                <li>
+                <li class="company__list-wrapper--single">
                   <span>2nd Service (Adults, Youth & Children)</span
                   ><span>11:00 AM</span>
                 </li>
-                <li>
+                <li class="company__list-wrapper--single">
                   <span>Wednesday -Mid-Week prayers</span><span>06:00 PM</span>
                 </li>
               </ul>
+
               <div class="subscribe">
                 <p class="column-title">Subscribe for Updates</p>
                 <form action="" class="subscribe-form">
@@ -519,6 +614,9 @@
         </section>
       </section>
     </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./assets/Js/main.js"></script>
   </body>
 </html>
