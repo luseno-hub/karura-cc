@@ -1,6 +1,9 @@
-// Tabs
+// ---------------> Variables <----------------
 const tabs = document.querySelectorAll(".tab");
 const contents = document.querySelectorAll(".tab-content");
+const swiperContainer = document.querySelector(".swiper");
+
+// ---------------> Tabs <----------------
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
     // Remove active class from all tabs and contents
@@ -13,27 +16,35 @@ tabs.forEach((tab) => {
   });
 });
 
-// Sliders
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  direction: "horizontal",
-  loop: true,
-  slidesPerView: 4,
-  spaceBetween: 32,
+// ---------------> Sliders <----------------
+if (swiperContainer) {
+  const swiper = new Swiper(".swiper", {
+    direction: "horizontal",
+    loop: true,
+    slidesPerView: 4,
+    spaceBetween: 32,
 
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination"
-  },
+    pagination: {
+      el: ".swiper-pagination"
+    },
 
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar"
+    scrollbar: {
+      el: ".swiper-scrollbar"
+    }
+  });
+}
+
+// ---------------> Header BG <----------------
+window.addEventListener("scroll", () => {
+  const header = document.querySelector(".header");
+  if (window.scrollY > 200) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
   }
 });
