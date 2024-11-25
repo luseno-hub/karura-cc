@@ -1,32 +1,10 @@
+@use "./global";
 @use "./variables";
+@use "./mixins";
 
 .about {
   .hero {
-    //   background-color: variables.$colors-secondary-900;
     background-image: url("http://localhost:5173/assets/images/outreach.jpg");
-    //   background-position: center;
-    //   background-repeat: no-repeat;
-    //   background-size: cover;
-    //   background-blend-mode: multiply;
-    // height: 80vh;
-
-    //   h2 {
-    //     margin-top: 8rem;
-    //     color: variables.$colors-secondary-100;
-    //   }
-
-    //   .nudge-down {
-    //     display: flex;
-    //     flex-direction: column;
-    //     align-items: center;
-    //     justify-content: center;
-    //     text-transform: uppercase;
-    //     letter-spacing: 0.2em;
-    //     font-size: 0.675rem;
-    //     font-family: inherit;
-    //     margin-top: 5rem;
-    //     animation: bounce 2s infinite ease-in-out;
-    //   }
   }
 
   .journey {
@@ -39,17 +17,25 @@
       align-items: center;
       justify-content: center;
       gap: 3rem;
-      padding: 9.38rem 0 4.69rem 0;
+      padding: 4rem 1rem;
+
+      @include mixins.respond-to(large) {
+        padding: 9.38rem 0 4.69rem 0;
+      }
     }
 
     .intro-text {
-      color: variables.$colors-accent-600;
+      color: variables.$colors-neutral-700;
       text-align: center;
       font-family: inherit;
-      font-size: 1.25rem;
+      font-size: 1rem;
       font-weight: 400;
       line-height: 160%;
       max-width: 640px;
+
+      @include mixins.respond-to(large) {
+        font-size: 1.25rem;
+      }
     }
   }
 
@@ -75,7 +61,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: multiply;
-    height: 50vh;
+    height: 70vh;
+
+    @include mixins.respond-to(large) {
+      height: 50vh;
+    }
 
     h3 {
       color: variables.$colors-primary-900;
@@ -100,6 +90,7 @@
 
     a {
       text-align: center;
+      margin: 0 auto;
     }
   }
 
@@ -117,7 +108,11 @@
 
   .core-values {
     background-color: variables.$colors-neutral-850;
-    padding: 9.375rem 0;
+    padding: 4rem 0;
+
+    @include mixins.respond-to(large) {
+      padding: 9.375rem 0;
+    }
 
     h3 {
       width: 100%;
@@ -129,10 +124,14 @@
 
     &__grid {
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-direction: column;
       align-items: flex-start;
       justify-content: center;
+
+      @include mixins.respond-to(large) {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
 
       &--single {
         display: flex;
@@ -140,8 +139,12 @@
         align-items: center;
         justify-content: flex-start;
         gap: 1rem;
-        width: calc((100% - 4rem) / 3);
+        width: 100%;
         padding: 2rem;
+
+        @include mixins.respond-to(large) {
+          width: calc((100% - 4rem) / 3);
+        }
 
         &_title {
           color: variables.$colors-neutral-200;

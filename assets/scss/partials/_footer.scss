@@ -10,35 +10,37 @@
   .featured-events {
     display: flex;
     flex-direction: column;
-    padding-top: 9.375rem;
+    padding-top: 4rem;
+
+    @include mixins.respond-to(large) {
+      padding-top: 9.375rem;
+    }
 
     .linked-title {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-bottom: 1.5rem;
-    }
-    .section-title {
-      color: #242424;
-      font-size: 3.5rem;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 88%;
-      letter-spacing: -0.07rem;
-      text-transform: capitalize;
-      margin: 0;
+
+      h2 {
+        color: variables.$colors-neutral-850;
+        text-transform: capitalize;
+      }
     }
 
     .content-grid {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       width: 100%;
-      border-top: 1px solid variables.$colors-neutral-800;
+      border-top: none;
       position: relative;
+      margin-bottom: 1rem;
 
       @include mixins.respond-to(large) {
+        border-top: 1px solid variables.$colors-neutral-800;
         flex-direction: row;
+        margin-bottom: 0;
       }
 
       .featured-event-single {
@@ -46,9 +48,8 @@
         flex-direction: column;
         flex-grow: 1;
         flex: 1;
-        // min-width: calc((100% - 15rem) / 3);
         width: 100%;
-        // padding: 3.75rem;
+        padding-bottom: 2rem;
 
         @include mixins.respond-to(large) {
           min-width: calc((100% - 15rem) / 3);
@@ -63,6 +64,12 @@
           font-weight: 500;
           line-height: 1.5rem;
           letter-spacing: -0.011rem;
+          padding: 0 1rem;
+          margin-top: 0.5rem;
+
+          @include mixins.respond-to(large) {
+            padding: 0;
+          }
         }
         .title {
           color: variables.$colors-neutral-800;
@@ -70,11 +77,21 @@
           font-size: 1.25rem;
           font-weight: 600;
           line-height: 1.8rem;
+          padding: 0 1rem;
+
+          @include mixins.respond-to(large) {
+            padding: 0;
+          }
         }
 
         &:first-of-type {
-          border-left: 1px solid variables.$colors-neutral-800;
-          border-right: 1px solid variables.$colors-neutral-800;
+          border-left: none;
+          border-right: none;
+
+          @include mixins.respond-to(large) {
+            border-left: 1px solid variables.$colors-neutral-800;
+            border-right: 1px solid variables.$colors-neutral-800;
+          }
         }
 
         &:last-of-type {
@@ -87,6 +104,7 @@
 
         .image {
           width: 100%;
+          height: 250px;
 
           img {
             width: 100%;
@@ -115,26 +133,38 @@
 
     h2 {
       color: variables.$colors-neutral-150;
-      font-size: 4rem;
       font-style: normal;
       font-weight: 700;
-      line-height: 88%;
+      line-height: 120%;
       letter-spacing: -0.045rem;
-      margin: 0 0 3rem 0;
+      margin: 0 0 1rem 0;
       max-width: 640px;
       text-align: center;
       text-transform: capitalize;
+
+      @include mixins.respond-to(large) {
+        margin: 0 auto 2rem auto;
+      }
     }
 
     p {
+      color: variables.$colors-secondary-100;
+      margin-bottom: 2rem;
       max-width: 49rem;
-      color: variables.$colors-neutral-200;
-      text-align: center;
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-style: normal;
       font-weight: 400;
+      text-align: center;
       line-height: 140%;
-      margin: 0 0 2rem 0;
+
+      @include mixins.respond-to(large) {
+        margin: 0 auto 4rem auto;
+        font-size: 1.2rem;
+      }
+    }
+
+    a {
+      margin: 0 auto;
     }
   }
 
@@ -143,7 +173,8 @@
   }
 
   &__top {
-    padding: 4rem 0 2rem 0;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -190,6 +221,8 @@
         text-decoration: none;
         font-size: 0.875rem;
         font-weight: 400;
+        display: inline-block;
+        width: 100%;
       }
 
       .contact-info {
@@ -284,12 +317,13 @@
 
   &__bottom {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid #222222;
     color: variables.$colors-neutral-650;
-    padding: 2rem 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 
     @include mixins.respond-to(large) {
       flex-direction: row;
@@ -297,10 +331,17 @@
 
     .legal {
       display: flex;
+      flex-direction: column-reverse;
       flex: 1;
       align-items: center;
       gap: 2rem;
       color: variables.$colors-neutral-400;
+      margin-top: 2rem;
+
+      @include mixins.respond-to(large) {
+        flex-direction: row;
+        margin-top: 0;
+      }
 
       p,
       a {

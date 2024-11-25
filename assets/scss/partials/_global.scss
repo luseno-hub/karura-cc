@@ -77,24 +77,12 @@ h1 {
   font-weight: 700;
   line-height: 88%;
   letter-spacing: -0.4rem;
-
-  .smiley {
-    width: clamp(4rem, 8vw, 10rem) !important;
-    height: clamp(4rem, 8vw, 10rem) !important;
-  }
 }
 
-// h2 {
-//   font-family: inherit;
-//   font-size: 5rem;
-//   font-weight: 700;
-//   line-height: 88%;
-//   letter-spacing: -0.1rem;
-// }
 h2 {
-  --min: 3rem;
+  --min: 2rem;
   --max: 5rem;
-  --fluid: calc(3rem + 2vw);
+  --fluid: calc(2rem + 2vw);
 
   font-size: clamp(var(--min), var(--fluid), var(--max));
   font-family: inherit;
@@ -104,16 +92,24 @@ h2 {
 }
 
 h3 {
+  --min: 1.5rem;
+  --max: 3.5rem;
+  --fluid: calc(1rem + 2vw);
+
+  font-size: clamp(var(--min), var(--fluid), var(--max));
   font-family: inherit;
-  font-size: 3.5rem;
   font-weight: 700;
   line-height: 100%;
   letter-spacing: 0;
 }
 
 h4 {
+  --min: 1.25rem;
+  --max: 2.25rem;
+  --fluid: calc(1rem + 2vw);
+
+  font-size: clamp(var(--min), var(--fluid), var(--max));
   font-family: inherit;
-  font-size: 2.25rem;
   font-weight: 700;
   line-height: 88%;
   letter-spacing: -0.045rem;
@@ -121,8 +117,12 @@ h4 {
 
 .title {
   &__large {
+    --min: 1rem;
+    --max: 1.5rem;
+    --fluid: calc(0.75rem + 2vw);
+
+    font-size: clamp(var(--min), var(--fluid), var(--max));
     font-family: inherit;
-    font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.75rem;
     letter-spacing: 0;
