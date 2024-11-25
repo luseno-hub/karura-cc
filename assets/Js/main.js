@@ -40,6 +40,21 @@ if (swiperContainer) {
 
     scrollbar: {
       el: ".swiper-scrollbar"
+    },
+
+    breakpoints: {
+      300: {
+        slidesPerView: 1.25,
+        spaceBetween: 20
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 24
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 32
+      }
     }
   });
 }
@@ -47,7 +62,7 @@ if (swiperContainer) {
 // ---------------> Header BG <----------------
 window.addEventListener("scroll", () => {
   const header = document.querySelector(".header");
-  if (window.scrollY > 200) {
+  if (window.scrollY > 40) {
     header.classList.add("scrolled");
   } else {
     header.classList.remove("scrolled");
