@@ -75,6 +75,11 @@
       font-weight: 700;
       line-height: 100%;
       letter-spacing: -1.12px;
+      margin-bottom: 1rem;
+
+      @include mixins.respond-to(large) {
+        margin-bottom: 2rem;
+      }
     }
 
     p {
@@ -83,26 +88,52 @@
       color: #fff;
       text-align: center;
       font-family: inherit;
+      margin: 0 auto;
       font-size: 1rem;
       font-weight: 400;
       line-height: 140%;
     }
 
-    a {
-      text-align: center;
+    .user-action {
+      width: 100%;
       margin: 0 auto;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 2rem;
+
+      @include mixins.respond-to(large) {
+        margin-top: 4rem;
+      }
+
+      a {
+        text-align: center;
+      }
     }
   }
 
   .strategic-plan {
-    padding: 9.325rem 0;
+    padding: 4rem 0;
+
+    @include mixins.respond-to(large) {
+      padding: 9.375rem 0;
+    }
   }
 
   .col-2__modified {
-    padding-bottom: 9.325rem;
+    padding-bottom: 2rem;
+
+    @include mixins.respond-to(large) {
+      padding-bottom: 9.325rem;
+    }
 
     .col-3__content-grid--single {
-      width: calc((100% - 2rem) / 2);
+      width: 100%;
+
+      @include mixins.respond-to(large) {
+        width: calc((100% - 2rem) / 2);
+      }
     }
   }
 
