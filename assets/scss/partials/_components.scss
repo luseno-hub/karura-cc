@@ -598,10 +598,11 @@ video,
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: 2rem;
 
   @include mixins.respond-to(large) {
     flex-direction: row;
+    gap: 4rem;
   }
 
   &--icon-left {

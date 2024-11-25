@@ -64,6 +64,15 @@ html {
   height: 100%;
 }
 
+.center-width__full {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
 .hero-padding__offset {
   padding: 6rem 0 3rem 0;
 }

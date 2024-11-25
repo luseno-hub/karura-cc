@@ -119,6 +119,29 @@
     @include mixins.respond-to(large) {
       padding: 9.375rem 0;
     }
+
+    h3 {
+      color: variables.$colors-neutral-800;
+      text-align: center;
+      text-transform: capitalize;
+      font-family: inherit;
+      font-weight: 700;
+      line-height: 100%;
+      letter-spacing: -1.12px;
+      margin-bottom: 2rem;
+
+      @include mixins.respond-to(large) {
+        margin-bottom: 4rem;
+      }
+    }
+
+    .center-width__full {
+      margin-top: 2rem;
+
+      @include mixins.respond-to(large) {
+        margin-top: 4rem;
+      }
+    }
   }
 
   .col-2__modified {
