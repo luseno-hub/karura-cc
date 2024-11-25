@@ -1060,6 +1060,28 @@ video,
     width: calc((100% - 4rem) / 2);
   }
 }
+.col-2__grid--icon-left .body-text {
+  color: hsl(0, 0%, 46%);
+}
+
+.col-2__modified {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+@media (min-width: 1200px) {
+  .col-2__modified {
+    padding-top: 9.325rem;
+    padding-bottom: 9.325rem;
+  }
+}
+.col-2__modified .col-3__content-grid--single {
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .col-2__modified .col-3__content-grid--single {
+    width: calc((100% - 2rem) / 2);
+  }
+}
 
 .header {
   width: 100%;
@@ -1689,6 +1711,7 @@ video,
 }
 .about .strategic-plan {
   padding: 4rem 0;
+  background-color: hsl(48, 100%, 92%);
 }
 @media (min-width: 1200px) {
   .about .strategic-plan {
@@ -1716,22 +1739,6 @@ video,
 @media (min-width: 1200px) {
   .about .strategic-plan .center-width__full {
     margin-top: 4rem;
-  }
-}
-.about .col-2__modified {
-  padding-bottom: 2rem;
-}
-@media (min-width: 1200px) {
-  .about .col-2__modified {
-    padding-bottom: 9.325rem;
-  }
-}
-.about .col-2__modified .col-3__content-grid--single {
-  width: 100%;
-}
-@media (min-width: 1200px) {
-  .about .col-2__modified .col-3__content-grid--single {
-    width: calc((100% - 2rem) / 2);
   }
 }
 .about .core-values {
