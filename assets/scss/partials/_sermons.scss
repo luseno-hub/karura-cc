@@ -19,6 +19,7 @@
 
   .sermon-series {
     padding: 4rem 0;
+    background-color: variables.$colors-accent-900;
 
     @include mixins.respond-to(large) {
       padding: 9.325rem 0;

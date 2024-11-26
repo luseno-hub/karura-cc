@@ -231,6 +231,12 @@ video,
     border: 1px solid variables.$colors-neutral-900;
   }
 
+  &__gray {
+    background-color: variables.$colors-neutral-550;
+    color: variables.$colors-neutral-800;
+    border: 1px solid variables.$colors-neutral-550;
+  }
+
   &__small {
     height: 2rem;
     padding: 0.5rem 0.875rem;

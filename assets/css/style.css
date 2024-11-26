@@ -698,6 +698,11 @@ video,
   color: hsl(0, 0%, 100%);
   border: 1px solid hsl(0, 0%, 0%);
 }
+.button__gray {
+  background-color: hsl(0, 0%, 92%);
+  color: hsl(213, 13%, 14%);
+  border: 1px solid hsl(0, 0%, 92%);
+}
 .button__small {
   height: 2rem;
   padding: 0.5rem 0.875rem;
@@ -2146,6 +2151,7 @@ video,
 }
 .sermon .sermon-series {
   padding: 4rem 0;
+  background-color: hsl(48, 100%, 92%);
 }
 @media (min-width: 1200px) {
   .sermon .sermon-series {
