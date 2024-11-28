@@ -513,6 +513,7 @@ h4 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: hsl(0, 0%, 100%);
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 0.675rem;
@@ -2438,6 +2439,11 @@ video,
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.city-on-a-hill .hero {
+  background-image: url("http://localhost:5173/assets/images/city-on-a-hill-2.jpg");
+  background-color: hsl(0, 0%, 37%);
 }
 
 /*# sourceMappingURL=style.css.map */

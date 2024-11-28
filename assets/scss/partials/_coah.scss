@@ -1,0 +1,10 @@
+@use "./global";
+@use "./variables";
+@use "./mixins";
+
+.city-on-a-hill {
+  .hero {
+    background-image: url("http://localhost:5173/assets/images/city-on-a-hill-2.jpg");
+    background-color: variables.$colors-neutral-700;
+  }
+}
