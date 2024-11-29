@@ -202,3 +202,11 @@ h4 {
   width: 100%;
   height: auto;
 }
+
+.section-padding {
+  padding: 4rem 0;
+
+  @include mixins.respond-to(large) {
+    padding: 9.325rem 0;
+  }
+}

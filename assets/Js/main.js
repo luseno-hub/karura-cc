@@ -26,7 +26,7 @@ if (swiperContainer) {
   const swiper = new Swiper(".swiper", {
     direction: "horizontal",
     loop: true,
-    slidesPerView: 4,
+    // slidesPerView: 1,
     spaceBetween: 32,
 
     pagination: {

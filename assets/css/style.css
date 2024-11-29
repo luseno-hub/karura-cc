@@ -478,6 +478,15 @@ h4 {
   height: auto;
 }
 
+.section-padding {
+  padding: 4rem 0;
+}
+@media (min-width: 1200px) {
+  .section-padding {
+    padding: 9.325rem 0;
+  }
+}
+
 .hero {
   display: grid;
   place-content: center;
@@ -2444,6 +2453,71 @@ video,
 .city-on-a-hill .hero {
   background-image: url("http://localhost:5173/assets/images/city-on-a-hill-2.jpg");
   background-color: hsl(0, 0%, 37%);
+}
+
+.gallery {
+  padding: 4rem 0;
+  background-color: hsl(48, 100%, 92%);
+}
+.gallery .title {
+  position: relative;
+}
+.gallery .title__header-text {
+  text-align: center;
+  z-index: 2;
+}
+.gallery .title__mirror-bg {
+  font-size: 10rem;
+  font-family: inherit;
+  font-weight: 900;
+  line-height: 88%;
+  letter-spacing: -0.4rem;
+  color: hsl(49, 64%, 73%);
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+@media (min-width: 1200px) {
+  .gallery {
+    padding: 9.325rem 0;
+  }
+}
+.gallery__items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+@media (min-width: 1200px) {
+  .gallery__items {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+.gallery__items--single {
+  width: 100%;
+  height: 15rem;
+  transition: transform 0.25s ease-in-out;
+}
+@media (min-width: 1200px) {
+  .gallery__items--single {
+    width: calc((100% - 6rem) / 4);
+    height: 20rem;
+  }
+}
+.gallery__items--single img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transition: transform 0.25s border-radius 0.25s ease-in-out;
+}
+.gallery__items--single:hover img {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transform: scale(1.125);
+  border-radius: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
