@@ -2461,12 +2461,29 @@ video,
   margin-top: 8rem;
 }
 .city-on-a-hill .hero .media-card__CTAs-wrapper {
-  margin: 4rem auto;
+  margin: 2rem auto;
+}
+@media (min-width: 1200px) {
+  .city-on-a-hill .hero .media-card__CTAs-wrapper {
+    margin: 4rem auto;
+  }
+}
+.city-on-a-hill .animated-progress-bar {
+  background-color: hsl(0, 0%, 100%);
+}
+.city-on-a-hill .animated-progress-bar h3 {
+  text-align: center;
 }
 .city-on-a-hill .animated-progress-bar .progress-container {
   position: relative;
   width: 120px;
   height: 120px;
+  margin: 2rem auto 0 auto;
+}
+@media (min-width: 1200px) {
+  .city-on-a-hill .animated-progress-bar .progress-container {
+    margin: 4rem auto 0 auto;
+  }
 }
 .city-on-a-hill .animated-progress-bar .progress-circle {
   transform: rotate(-90deg); /* Rotate so progress starts from the top */
@@ -2497,6 +2514,9 @@ video,
   font-size: 1.5rem;
   font-weight: bold;
   color: #333;
+}
+.city-on-a-hill .journey {
+  background-color: hsl(48, 100%, 92%);
 }
 .city-on-a-hill .journey .title-navigation {
   margin-bottom: 2rem;

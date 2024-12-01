@@ -14,15 +14,30 @@
     }
 
     .media-card__CTAs-wrapper {
-      margin: 4rem auto;
+      margin: 2rem auto;
+
+      @include mixins.respond-to(large) {
+        margin: 4rem auto;
+      }
     }
   }
 
   .animated-progress-bar {
+    background-color: variables.$colors-neutral-100;
+
+    h3 {
+      text-align: center;
+    }
+
     .progress-container {
       position: relative;
       width: 120px;
       height: 120px;
+      margin: 2rem auto 0 auto;
+
+      @include mixins.respond-to(large) {
+        margin: 4rem auto 0 auto;
+      }
     }
 
     .progress-circle {
@@ -62,6 +77,8 @@
   }
 
   .journey {
+    background-color: variables.$colors-accent-900;
+
     .title-navigation {
       margin-bottom: 2rem;
     }
