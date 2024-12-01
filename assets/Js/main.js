@@ -68,3 +68,32 @@ window.addEventListener("scroll", () => {
     header.classList.remove("scrolled");
   }
 });
+
+// ---------------> Progress Bar <----------------
+function setProgress(element, percent) {
+  const radius = 54; // Radius of the circle
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (percent / 100) * circumference;
+
+  // Update the progress bar stroke-dashoffset
+  const progressBar = element.querySelector(".progress-bar");
+  progressBar.style.strokeDashoffset = offset;
+
+  // Update the text
+  const progressText = element.querySelector(".progress-text");
+  progressText.textContent = `${percent}%`;
+}
+
+// Example: Animate progress
+const progressContainer = document.querySelector(".progress-container");
+
+// Simulate loading progress
+let progress = 0;
+const interval = setInterval(() => {
+  if (progress > 100) {
+    clearInterval(interval);
+  } else {
+    setProgress(progressContainer, progress);
+    progress += 1;
+  }
+}, 50); // Update every 50ms

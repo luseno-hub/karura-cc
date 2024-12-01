@@ -241,7 +241,7 @@
 
     <main class="city-on-a-hill">
       <section class="hero">
-        <h2>City on a Hill</h2>
+        <h1 class="hero__title">City on a Hill</h1>
 
         <div class="media-card__CTAs-wrapper">
           <a href="#" class="button button__primary"> Support the cause </a>
@@ -274,9 +274,25 @@
         </span>
       </section>
 
-      <section class="progress-bar section-padding">
+      <section class="animated-progress-bar section-padding">
         <div class="container">
           <h3>Progress so far</h3>
+          <div class="progress-bar__wrapper">
+            <div class="progress-container">
+              <svg
+                class="progress-circle"
+                width="120"
+                height="120"
+                viewBox="0 0 120 120"
+              >
+                <!-- Background Circle -->
+                <circle class="progress-bg" cx="60" cy="60" r="54"></circle>
+                <!-- Foreground Circle (progress) -->
+                <circle class="progress-bar" cx="60" cy="60" r="54"></circle>
+              </svg>
+              <div class="progress-text">0%</div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -326,11 +342,10 @@
 
       <section class="journey section-padding">
         <div class="container">
-          <h4>The Journey so far</h4>
-
           <!-- Slider main container -->
           <div class="swiper">
             <div class="title-navigation">
+              <h4>The Journey so far</h4>
               <div class="navigation">
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
@@ -350,7 +365,7 @@
                   <div class="year-lockup">
                     <span class="year">1996</span>
                     <span class="separator"></span>
-                    <span class="icon">
+                    <span class="icon inline-center">
                       <svg
                         width="25"
                         height="25"
@@ -394,9 +409,40 @@
                   />
                 </div>
                 <div class="content-info">
-                  <h5 class="leadership__grid--single__name">Name Goes Here</h5>
+                  <div class="year-lockup">
+                    <span class="year">1996</span>
+                    <span class="separator"></span>
+                    <span class="icon inline-center">
+                      <svg
+                        width="25"
+                        height="25"
+                        viewBox="0 0 25 25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.6667 8.5V12.5L14.1667 14"
+                          stroke="#141B34"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M20.2121 16.9534C21.8485 17.837 22.6667 18.2789 22.6667 19C22.6667 19.7211 21.8485 20.163 20.2121 21.0466L19.0978 21.6484C17.8411 22.327 17.2127 22.6663 16.9106 22.4196C16.1707 21.8154 17.3234 20.2561 17.607 19.7037C17.8944 19.144 17.8892 18.8459 17.607 18.2963C17.3234 17.7439 16.1707 16.1846 16.9106 15.5804C17.2127 15.3337 17.8411 15.673 19.0978 16.3516L20.2121 16.9534Z"
+                          stroke="#141B34"
+                          stroke-width="1.5"
+                        />
+                        <path
+                          d="M13.6928 22.448C13.3554 22.4824 13.0131 22.5 12.6667 22.5C7.14384 22.5 2.66669 18.0228 2.66669 12.5C2.66669 6.97715 7.14384 2.5 12.6667 2.5C18.1895 2.5 22.6667 6.97715 22.6667 12.5C22.6667 13.1849 22.5978 13.8538 22.4667 14.5"
+                          stroke="#141B34"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </span>
+                  </div>
                   <p class="leadership__grid--single__position">
-                    Position Goes Here
+                    Launch of Karura Community Chapel
                   </p>
                 </div>
               </div>
@@ -410,9 +456,40 @@
                   />
                 </div>
                 <div class="content-info">
-                  <h5 class="leadership__grid--single__name">Name Goes Here</h5>
+                  <div class="year-lockup">
+                    <span class="year">1996</span>
+                    <span class="separator"></span>
+                    <span class="icon inline-center">
+                      <svg
+                        width="25"
+                        height="25"
+                        viewBox="0 0 25 25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.6667 8.5V12.5L14.1667 14"
+                          stroke="#141B34"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M20.2121 16.9534C21.8485 17.837 22.6667 18.2789 22.6667 19C22.6667 19.7211 21.8485 20.163 20.2121 21.0466L19.0978 21.6484C17.8411 22.327 17.2127 22.6663 16.9106 22.4196C16.1707 21.8154 17.3234 20.2561 17.607 19.7037C17.8944 19.144 17.8892 18.8459 17.607 18.2963C17.3234 17.7439 16.1707 16.1846 16.9106 15.5804C17.2127 15.3337 17.8411 15.673 19.0978 16.3516L20.2121 16.9534Z"
+                          stroke="#141B34"
+                          stroke-width="1.5"
+                        />
+                        <path
+                          d="M13.6928 22.448C13.3554 22.4824 13.0131 22.5 12.6667 22.5C7.14384 22.5 2.66669 18.0228 2.66669 12.5C2.66669 6.97715 7.14384 2.5 12.6667 2.5C18.1895 2.5 22.6667 6.97715 22.6667 12.5C22.6667 13.1849 22.5978 13.8538 22.4667 14.5"
+                          stroke="#141B34"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </span>
+                  </div>
                   <p class="leadership__grid--single__position">
-                    Position Goes Here
+                    Launch of Karura Community Chapel
                   </p>
                 </div>
               </div>
@@ -426,9 +503,40 @@
                   />
                 </div>
                 <div class="content-info">
-                  <h5 class="leadership__grid--single__name">Name Goes Here</h5>
+                  <div class="year-lockup">
+                    <span class="year">1996</span>
+                    <span class="separator"></span>
+                    <span class="icon inline-center">
+                      <svg
+                        width="25"
+                        height="25"
+                        viewBox="0 0 25 25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.6667 8.5V12.5L14.1667 14"
+                          stroke="#141B34"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M20.2121 16.9534C21.8485 17.837 22.6667 18.2789 22.6667 19C22.6667 19.7211 21.8485 20.163 20.2121 21.0466L19.0978 21.6484C17.8411 22.327 17.2127 22.6663 16.9106 22.4196C16.1707 21.8154 17.3234 20.2561 17.607 19.7037C17.8944 19.144 17.8892 18.8459 17.607 18.2963C17.3234 17.7439 16.1707 16.1846 16.9106 15.5804C17.2127 15.3337 17.8411 15.673 19.0978 16.3516L20.2121 16.9534Z"
+                          stroke="#141B34"
+                          stroke-width="1.5"
+                        />
+                        <path
+                          d="M13.6928 22.448C13.3554 22.4824 13.0131 22.5 12.6667 22.5C7.14384 22.5 2.66669 18.0228 2.66669 12.5C2.66669 6.97715 7.14384 2.5 12.6667 2.5C18.1895 2.5 22.6667 6.97715 22.6667 12.5C22.6667 13.1849 22.5978 13.8538 22.4667 14.5"
+                          stroke="#141B34"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </span>
+                  </div>
                   <p class="leadership__grid--single__position">
-                    Position Goes Here
+                    Launch of Karura Community Chapel
                   </p>
                 </div>
               </div>

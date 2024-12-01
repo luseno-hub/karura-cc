@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -2454,19 +2455,87 @@ video,
   background-image: url("http://localhost:5173/assets/images/city-on-a-hill-2.jpg");
   background-color: hsl(0, 0%, 37%);
 }
-
-.gallery {
+.city-on-a-hill .hero__title {
+  color: hsl(217, 100%, 96%);
+  text-align: center;
+  margin-top: 8rem;
+}
+.city-on-a-hill .hero .media-card__CTAs-wrapper {
+  margin: 4rem auto;
+}
+.city-on-a-hill .animated-progress-bar .progress-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+.city-on-a-hill .animated-progress-bar .progress-circle {
+  transform: rotate(-90deg); /* Rotate so progress starts from the top */
+}
+.city-on-a-hill .animated-progress-bar .progress-bg,
+.city-on-a-hill .animated-progress-bar .progress-bar {
+  fill: none; /* Transparent fill */
+  stroke-width: 12;
+  cx: 60;
+  cy: 60;
+  r: 54; /* Radius matches the SVG's circle */
+}
+.city-on-a-hill .animated-progress-bar .progress-bg {
+  stroke: #ddd; /* Background circle color */
+}
+.city-on-a-hill .animated-progress-bar .progress-bar {
+  stroke: hsl(57, 100%, 48%); /* Progress color */
+  stroke-linecap: round; /* Smooth edges */
+  stroke-dasharray: 339.29; /* Circumference of the circle (2 * π * r) */
+  stroke-dashoffset: 339.29; /* Initially hidden */
+  transition: stroke-dashoffset 1s ease-out; /* Smooth animation */
+}
+.city-on-a-hill .animated-progress-bar .progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+.city-on-a-hill .journey .title-navigation {
+  margin-bottom: 2rem;
+}
+.city-on-a-hill .journey .content-info {
+  width: 100%;
+}
+.city-on-a-hill .journey .content-info .year-lockup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin: 1rem 0;
+}
+.city-on-a-hill .journey .content-info .year-lockup .year {
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.city-on-a-hill .journey .content-info .year-lockup .separator {
+  height: 1.5px;
+  background-color: hsl(213, 13%, 14%);
+  flex: 1;
+}
+.city-on-a-hill .gallery {
   padding: 4rem 0;
   background-color: hsl(48, 100%, 92%);
 }
-.gallery .title {
+.city-on-a-hill .gallery .title {
   position: relative;
+  height: auto;
 }
-.gallery .title__header-text {
+.city-on-a-hill .gallery .title__header-text {
   text-align: center;
+  position: relative;
   z-index: 2;
 }
-.gallery .title__mirror-bg {
+.city-on-a-hill .gallery .title__mirror-bg {
   font-size: 10rem;
   font-family: inherit;
   font-weight: 900;
@@ -2475,46 +2544,49 @@ video,
   color: hsl(49, 64%, 73%);
   z-index: 1;
   position: absolute;
+  transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
 }
 @media (min-width: 1200px) {
-  .gallery {
+  .city-on-a-hill .gallery {
     padding: 9.325rem 0;
   }
 }
-.gallery__items {
+.city-on-a-hill .gallery__items {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   flex-wrap: wrap;
   margin-top: 2rem;
+  position: relative;
+  z-index: 3;
 }
 @media (min-width: 1200px) {
-  .gallery__items {
+  .city-on-a-hill .gallery__items {
     flex-direction: row;
     gap: 2rem;
   }
 }
-.gallery__items--single {
+.city-on-a-hill .gallery__items--single {
   width: 100%;
   height: 15rem;
   transition: transform 0.25s ease-in-out;
 }
 @media (min-width: 1200px) {
-  .gallery__items--single {
+  .city-on-a-hill .gallery__items--single {
     width: calc((100% - 6rem) / 4);
     height: 20rem;
   }
 }
-.gallery__items--single img {
+.city-on-a-hill .gallery__items--single img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 0.5rem;
   transition: transform 0.25s border-radius 0.25s ease-in-out;
 }
-.gallery__items--single:hover img {
+.city-on-a-hill .gallery__items--single:hover img {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   transform: scale(1.125);
   border-radius: 0;
