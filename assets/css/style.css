@@ -2616,4 +2616,38 @@ video,
   border-radius: 0;
 }
 
+.children .hero {
+  background-image: url("http://localhost:5173/assets/images/kids-page-photo-background.jpg");
+  background-color: hsl(0, 0%, 37%);
+}
+.children .hero .user-action {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem auto;
+}
+.children .hero .user-action button {
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .children .hero .user-action {
+    flex-direction: row;
+    margin: 4rem auto;
+  }
+  .children .hero .user-action button {
+    width: fit-content;
+  }
+}
+.children .kisima {
+  background-color: hsl(213, 13%, 14%);
+}
+.children .kisima h3,
+.children .kisima p {
+  text-align: center;
+}
+.children .kisima p {
+  color: hsl(0, 0%, 91%);
+  margin-bottom: 2rem;
+}
+
 /*# sourceMappingURL=style.css.map */
