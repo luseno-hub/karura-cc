@@ -16,6 +16,7 @@
   h2 {
     margin-top: 8rem;
     color: variables.$colors-secondary-100;
+    text-align: center;
   }
 
   p {
@@ -27,6 +28,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
+    text-align: center;
 
     @include mixins.respond-to(large) {
       font-size: 1.2rem;
@@ -680,7 +682,6 @@ video,
   }
 
   p {
-    text-transform: capitalize;
     color: variables.$colors-meta;
   }
 

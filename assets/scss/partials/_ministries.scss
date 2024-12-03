@@ -157,3 +157,31 @@
     }
   }
 }
+
+.youth {
+  .hero {
+    background-image: url("http://localhost:5173/assets/images/kids-page-photo-background.jpg");
+    background-color: variables.$colors-neutral-700;
+    background-position: top center;
+
+    p {
+      margin-top: 2rem;
+
+      @include mixins.respond-to(large) {
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  .quick-access {
+    background-color: variables.$colors-accent-900;
+  }
+  .quick-access,
+  .hekalu,
+  .emerge,
+  .vuka,
+  .young-adults,
+  .junction {
+    background-color: variables.$colors-secondary-100;
+  }
+}
