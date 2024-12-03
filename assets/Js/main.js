@@ -1,12 +1,15 @@
 // ---------------> Variables <----------------
 const tabs = document.querySelectorAll(".tab");
 const contents = document.querySelectorAll(".tab-content");
-const swiperContainer = document.querySelector(".swiper");
+// const swiperContainer = document.querySelector(".swiper");
+const swiperContainers = document.querySelectorAll(".swiper");
+const menuToggle = document.querySelector("#menu-toggle");
 
 // ---------------> Hamburger menu <----------------
-document.querySelector("#menu-toggle").addEventListener("click", function () {
-  this.classList.toggle("open");
-});
+menuToggle &&
+  menuToggle.addEventListener("click", function () {
+    this.classList.toggle("open");
+  });
 
 // ---------------> Tabs <----------------
 tabs.forEach((tab) => {
@@ -22,40 +25,38 @@ tabs.forEach((tab) => {
 });
 
 // ---------------> Sliders <----------------
-if (swiperContainer) {
-  const swiper = new Swiper(".swiper", {
-    direction: "horizontal",
-    loop: true,
-    // slidesPerView: 1,
-    spaceBetween: 32,
 
-    pagination: {
-      el: ".swiper-pagination"
-    },
+if (swiperContainers.length) {
+  swiperContainers.forEach((container) => {
+    // Parse breakpoints from the data attribute
+    const breakpoints = container.dataset.breakpoints
+      ? JSON.parse(container.dataset.breakpoints)
+      : {};
 
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    },
+    const swiperConfig = {
+      direction: "horizontal",
+      loop: true,
+      spaceBetween: 32,
 
-    scrollbar: {
-      el: ".swiper-scrollbar"
-    },
-
-    breakpoints: {
-      300: {
-        slidesPerView: 1.25,
-        spaceBetween: 20
+      pagination: {
+        el: container.querySelector(".swiper-pagination"),
+        clickable: true
       },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 24
+
+      navigation: {
+        nextEl: container.querySelector(".swiper-button-next"),
+        prevEl: container.querySelector(".swiper-button-prev")
       },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 32
-      }
-    }
+
+      scrollbar: {
+        el: container.querySelector(".swiper-scrollbar"),
+        draggable: true
+      },
+
+      breakpoints // Use dynamic breakpoints
+    };
+
+    new Swiper(container, swiperConfig);
   });
 }
 
