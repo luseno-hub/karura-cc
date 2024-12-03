@@ -1115,7 +1115,8 @@ video,
 .content-image__full-col-bloc h3,
 .content-image__full-col-bloc p {
   text-align: center;
-  min-width: 640px;
+  max-width: 640px;
+  margin: 0 auto;
 }
 .content-image__full-col-bloc .user-action {
   display: flex;

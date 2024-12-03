@@ -663,7 +663,8 @@ video,
   h3,
   p {
     text-align: center;
-    min-width: 640px;
+    max-width: 640px;
+    margin: 0 auto;
   }
 
   .user-action {
