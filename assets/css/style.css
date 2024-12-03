@@ -1109,6 +1109,19 @@ video,
   }
 }
 
+.content-image__full-col-bloc {
+  width: 100%;
+}
+.content-image__full-col-bloc h3,
+.content-image__full-col-bloc p {
+  text-align: center;
+  min-width: 640px;
+}
+.content-image__full-col-bloc .user-action {
+  display: flex;
+  flex-direction: row;
+}
+
 .header {
   width: 100%;
   z-index: 100;
