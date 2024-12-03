@@ -2629,6 +2629,7 @@ video,
 .children .hero {
   background-image: url("http://localhost:5173/assets/images/kids-page-photo-background.jpg");
   background-color: hsl(0, 0%, 37%);
+  background-position: top center;
 }
 .children .hero .user-action {
   display: flex;
@@ -2652,7 +2653,7 @@ video,
   background-color: hsl(48, 100%, 92%);
 }
 .children .kisima {
-  background-color: hsl(213, 13%, 14%);
+  background-color: hsl(0, 0%, 4%);
 }
 .children .kisima h3,
 .children .kisima p {
@@ -2663,7 +2664,7 @@ video,
   font-style: normal;
 }
 .children .kisima h3 {
-  color: hsl(0, 0%, 93%);
+  color: hsl(0, 0%, 96%);
   margin-bottom: 2rem;
   text-align: center;
   font-weight: 700;
@@ -2694,17 +2695,23 @@ video,
 .children .annual-activities {
   background-color: hsl(48, 100%, 92%);
 }
+.children .annual-activities h3 {
+  color: hsl(213, 13%, 14%);
+  margin-bottom: 2rem;
+}
 .children .annual-activities .flex__col-3 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 2rem;
+  row-gap: 1.5rem;
   width: 100%;
 }
 @media (min-width: 1200px) {
   .children .annual-activities .flex__col-3 {
     flex-direction: row;
     flex-wrap: wrap;
+    row-gap: 4rem;
   }
 }
 .children .annual-activities .flex__col-3__single--3-tier {
@@ -2756,6 +2763,9 @@ video,
   .children .annual-activities .flex__col-3__single--3-tier .desc {
     font-size: 1rem;
   }
+}
+.children .annual-activities .flex__col-3__single--3-tier button {
+  margin-top: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

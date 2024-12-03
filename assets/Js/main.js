@@ -101,7 +101,7 @@ function setProgress(element, percent) {
   progressText.textContent = `${percent}%`;
 }
 
-// Example: Animate progress
+// Animate progress
 const progressContainer = document.querySelector(".progress-container");
 
 // Simulate loading progress
