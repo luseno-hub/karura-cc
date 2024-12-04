@@ -196,7 +196,7 @@
 
 .worship {
   .hero {
-    background-image: url("http://localhost:5173/assets/images/kids-page-photo-background.jpg");
+    background-image: url("http://localhost:5173/assets/images/worship.jpg");
     background-color: variables.$colors-neutral-700;
     background-position: top center;
     height: 100vh;
@@ -217,7 +217,7 @@
   }
 
   .ombi {
-    background-image: url("http://localhost:5173/assets/images/ombi-hd.jpg");
+    background-image: url("http://localhost:5173/assets/images/worship-2.jpg");
     // background-color: variables.$colors-neutral-700;
     background-color: transparent;
     background-position: top center;
@@ -242,6 +242,29 @@
       text-align: center;
       margin-bottom: 2rem;
       max-width: 640px;
+    }
+  }
+}
+
+.cfl {
+  .hero {
+    background-image: url("http://localhost:5173/assets/images/Family.jpg");
+    background-color: variables.$colors-neutral-700;
+    background-position: top center;
+    height: 100vh;
+
+    h1 {
+      color: variables.$colors-secondary-100;
+    }
+
+    p {
+      margin-top: 2rem;
+      text-align: center;
+      margin: 0 auto;
+
+      @include mixins.respond-to(large) {
+        margin-top: 3rem;
+      }
     }
   }
 }

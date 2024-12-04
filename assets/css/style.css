@@ -1116,30 +1116,56 @@ video,
   display: flex;
   width: 100%;
 }
+.content-image__full-col-bloc h2,
 .content-image__full-col-bloc h3,
 .content-image__full-col-bloc p,
+.content-image__full-col-bloc .body-text,
+.content-image__half-col-bloc h2,
 .content-image__half-col-bloc h3,
-.content-image__half-col-bloc p {
+.content-image__half-col-bloc p,
+.content-image__half-col-bloc .body-text {
   text-align: center;
   max-width: 640px;
   margin: 0 auto;
   margin-bottom: 2rem;
 }
 @media (min-width: 1200px) {
+  .content-image__full-col-bloc h2,
   .content-image__full-col-bloc h3,
   .content-image__full-col-bloc p,
+  .content-image__full-col-bloc .body-text,
+  .content-image__half-col-bloc h2,
   .content-image__half-col-bloc h3,
-  .content-image__half-col-bloc p {
+  .content-image__half-col-bloc p,
+  .content-image__half-col-bloc .body-text {
     margin-bottom: 3rem;
   }
 }
+.content-image__full-col-bloc h2,
 .content-image__full-col-bloc h3,
+.content-image__half-col-bloc h2,
 .content-image__half-col-bloc h3 {
   text-transform: capitalize;
   color: hsl(0, 0%, 4%);
 }
 .content-image__full-col-bloc p,
-.content-image__half-col-bloc p {
+.content-image__full-col-bloc .body-text,
+.content-image__half-col-bloc p,
+.content-image__half-col-bloc .body-text {
+  color: hsl(0, 0%, 46%);
+}
+.content-image__full-col-bloc ol,
+.content-image__full-col-bloc ul,
+.content-image__half-col-bloc ol,
+.content-image__half-col-bloc ul {
+  padding-left: 2rem;
+  margin: 2rem 0;
+}
+.content-image__full-col-bloc ol li,
+.content-image__full-col-bloc ul li,
+.content-image__half-col-bloc ol li,
+.content-image__half-col-bloc ul li {
+  margin-bottom: 0.5rem;
   color: hsl(0, 0%, 46%);
 }
 .content-image__full-col-bloc .user-action,
@@ -3016,7 +3042,7 @@ video,
 }
 
 .worship .hero {
-  background-image: url("http://localhost:5173/assets/images/kids-page-photo-background.jpg");
+  background-image: url("http://localhost:5173/assets/images/worship.jpg");
   background-color: hsl(0, 0%, 37%);
   background-position: top center;
   height: 100vh;
@@ -3035,7 +3061,7 @@ video,
   }
 }
 .worship .ombi {
-  background-image: url("http://localhost:5173/assets/images/ombi-hd.jpg");
+  background-image: url("http://localhost:5173/assets/images/worship-2.jpg");
   background-color: transparent;
   background-position: top center;
   height: 100vh;
@@ -3058,6 +3084,26 @@ video,
   text-align: center;
   margin-bottom: 2rem;
   max-width: 640px;
+}
+
+.cfl .hero {
+  background-image: url("http://localhost:5173/assets/images/Family.jpg");
+  background-color: hsl(0, 0%, 37%);
+  background-position: top center;
+  height: 100vh;
+}
+.cfl .hero h1 {
+  color: hsl(217, 100%, 96%);
+}
+.cfl .hero p {
+  margin-top: 2rem;
+  text-align: center;
+  margin: 0 auto;
+}
+@media (min-width: 1200px) {
+  .cfl .hero p {
+    margin-top: 3rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
