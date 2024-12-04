@@ -9,7 +9,8 @@
 .clg,
 .outreach,
 .compassion,
-.leadership {
+.leadership,
+.communications {
   .hero {
     background-color: variables.$colors-neutral-700;
     background-position: top center;
@@ -299,6 +300,12 @@
 }
 
 .leadership {
+  .hero {
+    background-image: url("http://localhost:5173/assets/images/Family.jpg");
+  }
+}
+
+.communications {
   .hero {
     background-image: url("http://localhost:5173/assets/images/Family.jpg");
   }

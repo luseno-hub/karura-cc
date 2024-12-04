@@ -2936,7 +2936,8 @@ video,
 .clg .hero,
 .outreach .hero,
 .compassion .hero,
-.leadership .hero {
+.leadership .hero,
+.communications .hero {
   background-color: hsl(0, 0%, 37%);
   background-position: top center;
   height: 100vh;
@@ -2948,7 +2949,8 @@ video,
 .clg .hero h1,
 .outreach .hero h1,
 .compassion .hero h1,
-.leadership .hero h1 {
+.leadership .hero h1,
+.communications .hero h1 {
   color: hsl(217, 100%, 96%);
 }
 .children .hero p,
@@ -2958,7 +2960,8 @@ video,
 .clg .hero p,
 .outreach .hero p,
 .compassion .hero p,
-.leadership .hero p {
+.leadership .hero p,
+.communications .hero p {
   margin-top: 2rem;
   text-align: center;
   margin: 0 auto;
@@ -2971,7 +2974,8 @@ video,
   .clg .hero p,
   .outreach .hero p,
   .compassion .hero p,
-  .leadership .hero p {
+  .leadership .hero p,
+  .communications .hero p {
     margin-top: 3rem;
   }
 }
@@ -2982,7 +2986,8 @@ video,
 .clg .hero .user-action,
 .outreach .hero .user-action,
 .compassion .hero .user-action,
-.leadership .hero .user-action {
+.leadership .hero .user-action,
+.communications .hero .user-action {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -2995,7 +3000,8 @@ video,
 .clg .hero .user-action button,
 .outreach .hero .user-action button,
 .compassion .hero .user-action button,
-.leadership .hero .user-action button {
+.leadership .hero .user-action button,
+.communications .hero .user-action button {
   width: 100%;
 }
 @media (min-width: 1200px) {
@@ -3006,7 +3012,8 @@ video,
   .clg .hero .user-action,
   .outreach .hero .user-action,
   .compassion .hero .user-action,
-  .leadership .hero .user-action {
+  .leadership .hero .user-action,
+  .communications .hero .user-action {
     flex-direction: row;
     margin: 4rem auto;
   }
@@ -3017,7 +3024,8 @@ video,
   .clg .hero .user-action button,
   .outreach .hero .user-action button,
   .compassion .hero .user-action button,
-  .leadership .hero .user-action button {
+  .leadership .hero .user-action button,
+  .communications .hero .user-action button {
     width: fit-content;
   }
 }
@@ -3236,6 +3244,10 @@ video,
 }
 
 .leadership .hero {
+  background-image: url("http://localhost:5173/assets/images/Family.jpg");
+}
+
+.communications .hero {
   background-image: url("http://localhost:5173/assets/images/Family.jpg");
 }
 
