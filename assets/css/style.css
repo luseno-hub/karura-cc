@@ -891,6 +891,15 @@ video,
     gap: 4rem;
   }
 }
+.content-list__wrapper {
+  width: 100%;
+  flex: 1;
+}
+@media (min-width: 1200px) {
+  .content-list__wrapper {
+    max-width: 50%;
+  }
+}
 .content-list__title {
   color: hsl(0, 0%, 0%);
   width: 100%;
@@ -900,6 +909,14 @@ video,
   .content-list__title {
     max-width: 50%;
   }
+}
+.content-list__body {
+  color: hsl(0, 0%, 46%);
+  width: 80%;
+  margin: 2rem 0;
+}
+.content-list .user-action {
+  justify-content: flex-start;
 }
 .content-list nav {
   flex: 1;
@@ -2873,7 +2890,8 @@ video,
 .youth .hero,
 .worship .hero,
 .cfl .hero,
-.clg .hero {
+.clg .hero,
+.outreach .hero {
   background-color: hsl(0, 0%, 37%);
   background-position: top center;
   height: 100vh;
@@ -2882,14 +2900,16 @@ video,
 .youth .hero h1,
 .worship .hero h1,
 .cfl .hero h1,
-.clg .hero h1 {
+.clg .hero h1,
+.outreach .hero h1 {
   color: hsl(217, 100%, 96%);
 }
 .children .hero p,
 .youth .hero p,
 .worship .hero p,
 .cfl .hero p,
-.clg .hero p {
+.clg .hero p,
+.outreach .hero p {
   margin-top: 2rem;
   text-align: center;
   margin: 0 auto;
@@ -2899,7 +2919,8 @@ video,
   .youth .hero p,
   .worship .hero p,
   .cfl .hero p,
-  .clg .hero p {
+  .clg .hero p,
+  .outreach .hero p {
     margin-top: 3rem;
   }
 }
@@ -2907,7 +2928,8 @@ video,
 .youth .hero .user-action,
 .worship .hero .user-action,
 .cfl .hero .user-action,
-.clg .hero .user-action {
+.clg .hero .user-action,
+.outreach .hero .user-action {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -2917,7 +2939,8 @@ video,
 .youth .hero .user-action button,
 .worship .hero .user-action button,
 .cfl .hero .user-action button,
-.clg .hero .user-action button {
+.clg .hero .user-action button,
+.outreach .hero .user-action button {
   width: 100%;
 }
 @media (min-width: 1200px) {
@@ -2925,7 +2948,8 @@ video,
   .youth .hero .user-action,
   .worship .hero .user-action,
   .cfl .hero .user-action,
-  .clg .hero .user-action {
+  .clg .hero .user-action,
+  .outreach .hero .user-action {
     flex-direction: row;
     margin: 4rem auto;
   }
@@ -2933,7 +2957,8 @@ video,
   .youth .hero .user-action button,
   .worship .hero .user-action button,
   .cfl .hero .user-action button,
-  .clg .hero .user-action button {
+  .clg .hero .user-action button,
+  .outreach .hero .user-action button {
     width: fit-content;
   }
 }
@@ -3124,6 +3149,15 @@ video,
 .clg .quoted-slider .swiper-pagination {
   position: absolute;
   bottom: 0;
+}
+
+.outreach .hero {
+  background-image: url("http://localhost:5173/assets/images/Family.jpg");
+}
+.outreach .break-image {
+  background-image: url("http://localhost:5173/assets/images/Family.jpg");
+  width: 100%;
+  height: 500px;
 }
 
 /*# sourceMappingURL=style.css.map */

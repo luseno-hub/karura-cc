@@ -431,6 +431,15 @@ video,
     }
   }
 
+  &__wrapper {
+    width: 100%;
+    flex: 1;
+
+    @include mixins.respond-to(large) {
+      max-width: 50%;
+    }
+  }
+
   &__title {
     color: variables.$colors-neutral-900;
     width: 100%;
@@ -439,6 +448,16 @@ video,
     @include mixins.respond-to(large) {
       max-width: 50%;
     }
+  }
+
+  &__body {
+    color: variables.$colors-meta;
+    width: 80%;
+    margin: 2rem 0;
+  }
+
+  .user-action {
+    justify-content: flex-start;
   }
 
   nav {
