@@ -1316,6 +1316,15 @@ video,
   font-weight: 400;
 }
 
+.horizontal-line {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  width: 1px;
+  height: 150px;
+  background-color: hsl(0, 0%, 100%);
+}
+
 .header {
   width: 100%;
   z-index: 100;
@@ -1639,7 +1648,7 @@ video,
   color: hsl(0, 0%, 98%);
   font-style: normal;
   font-weight: 700;
-  line-height: 120%;
+  line-height: 88%;
   letter-spacing: -0.045rem;
   margin: 0 0 1rem 0;
   max-width: 640px;
@@ -2838,6 +2847,9 @@ video,
   background-color: hsl(0, 0%, 37%);
   background-position: top center;
 }
+.children .hero h1 {
+  color: hsl(217, 100%, 96%);
+}
 .children .hero .user-action {
   display: flex;
   flex-direction: column;
@@ -2979,17 +2991,20 @@ video,
   background-image: url("http://localhost:5173/assets/images/kids-page-photo-background.jpg");
   background-color: hsl(0, 0%, 37%);
   background-position: top center;
+  height: 100vh;
+}
+.youth .hero h1 {
+  color: hsl(217, 100%, 96%);
 }
 .youth .hero p {
   margin-top: 2rem;
+  text-align: center;
+  margin: 0 auto;
 }
 @media (min-width: 1200px) {
   .youth .hero p {
     margin-top: 3rem;
   }
-}
-.youth .quick-access {
-  background-color: hsl(48, 100%, 92%);
 }
 .youth .quick-access,
 .youth .hekalu,
@@ -2998,6 +3013,51 @@ video,
 .youth .young-adults,
 .youth .junction {
   background-color: hsl(217, 100%, 96%);
+}
+
+.worship .hero {
+  background-image: url("http://localhost:5173/assets/images/kids-page-photo-background.jpg");
+  background-color: hsl(0, 0%, 37%);
+  background-position: top center;
+  height: 100vh;
+}
+.worship .hero h1 {
+  color: hsl(217, 100%, 96%);
+}
+.worship .hero p {
+  margin-top: 2rem;
+  text-align: center;
+  margin: 0 auto;
+}
+@media (min-width: 1200px) {
+  .worship .hero p {
+    margin-top: 3rem;
+  }
+}
+.worship .ombi {
+  background-image: url("http://localhost:5173/assets/images/ombi-hd.jpg");
+  background-color: transparent;
+  background-position: top center;
+  height: 100vh;
+  color: hsl(0, 0%, 100%);
+}
+.worship .ombi .content-container {
+  background-color: hsla(217, 100%, 37%, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  width: fit-content;
+  width: 720px;
+  height: 720px;
+  border-radius: 50%;
+  margin: 0 auto;
+  padding: 8rem;
+}
+.worship .ombi h2,
+.worship .ombi p {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 640px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -862,3 +862,12 @@ video,
     }
   }
 }
+
+.horizontal-line {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  width: 1px;
+  height: 150px;
+  background-color: variables.$colors-neutral-100;
+}

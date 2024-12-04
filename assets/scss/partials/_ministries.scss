@@ -8,6 +8,10 @@
     background-color: variables.$colors-neutral-700;
     background-position: top center;
 
+    h1 {
+      color: variables.$colors-secondary-100;
+    }
+
     .user-action {
       display: flex;
       flex-direction: column;
@@ -163,9 +167,16 @@
     background-image: url("http://localhost:5173/assets/images/kids-page-photo-background.jpg");
     background-color: variables.$colors-neutral-700;
     background-position: top center;
+    height: 100vh;
+
+    h1 {
+      color: variables.$colors-secondary-100;
+    }
 
     p {
       margin-top: 2rem;
+      text-align: center;
+      margin: 0 auto;
 
       @include mixins.respond-to(large) {
         margin-top: 3rem;
@@ -173,9 +184,6 @@
     }
   }
 
-  .quick-access {
-    background-color: variables.$colors-accent-900;
-  }
   .quick-access,
   .hekalu,
   .emerge,
@@ -183,5 +191,57 @@
   .young-adults,
   .junction {
     background-color: variables.$colors-secondary-100;
+  }
+}
+
+.worship {
+  .hero {
+    background-image: url("http://localhost:5173/assets/images/kids-page-photo-background.jpg");
+    background-color: variables.$colors-neutral-700;
+    background-position: top center;
+    height: 100vh;
+
+    h1 {
+      color: variables.$colors-secondary-100;
+    }
+
+    p {
+      margin-top: 2rem;
+      text-align: center;
+      margin: 0 auto;
+
+      @include mixins.respond-to(large) {
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  .ombi {
+    background-image: url("http://localhost:5173/assets/images/ombi-hd.jpg");
+    // background-color: variables.$colors-neutral-700;
+    background-color: transparent;
+    background-position: top center;
+    height: 100vh;
+    color: variables.$colors-neutral-100;
+
+    .content-container {
+      background-color: hsl(217, 100%, 37%, 0.7);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      width: fit-content;
+      width: 720px;
+      height: 720px;
+      border-radius: 50%;
+      margin: 0 auto;
+      padding: 8rem;
+    }
+
+    h2,
+    p {
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 2rem;
+      max-width: 640px;
+    }
   }
 }
