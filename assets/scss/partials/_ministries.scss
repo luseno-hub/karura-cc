@@ -273,7 +273,19 @@
 
   .break-image {
     background-image: url("http://localhost:5173/assets/images/Family.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
     width: 100%;
-    height: 500px;
+    height: 250px;
+
+    @include mixins.respond-to(large) {
+      height: 500px;
+    }
+  }
+
+  .church-planting {
+    background-color: variables.$colors-secondary-100;
   }
 }

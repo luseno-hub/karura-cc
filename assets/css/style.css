@@ -912,8 +912,14 @@ video,
 }
 .content-list__body {
   color: hsl(0, 0%, 46%);
-  width: 80%;
-  margin: 2rem 0;
+  width: 100%;
+  margin: 1rem 0;
+}
+@media (min-width: 1200px) {
+  .content-list__body {
+    width: 80%;
+    margin: 2rem 0;
+  }
 }
 .content-list .user-action {
   justify-content: flex-start;
@@ -3156,8 +3162,20 @@ video,
 }
 .outreach .break-image {
   background-image: url("http://localhost:5173/assets/images/Family.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
   width: 100%;
-  height: 500px;
+  height: 250px;
+}
+@media (min-width: 1200px) {
+  .outreach .break-image {
+    height: 500px;
+  }
+}
+.outreach .church-planting {
+  background-color: hsl(217, 100%, 96%);
 }
 
 /*# sourceMappingURL=style.css.map */
