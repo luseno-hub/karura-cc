@@ -7,7 +7,8 @@
 .worship,
 .cfl,
 .clg,
-.outreach {
+.outreach,
+.compassion {
   .hero {
     background-color: variables.$colors-neutral-700;
     background-position: top center;
@@ -287,5 +288,11 @@
 
   .church-planting {
     background-color: variables.$colors-secondary-100;
+  }
+}
+
+.compassion {
+  .hero {
+    background-image: url("http://localhost:5173/assets/images/Family.jpg");
   }
 }

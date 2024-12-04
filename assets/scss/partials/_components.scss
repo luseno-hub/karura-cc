@@ -227,6 +227,38 @@ video,
       background-color: transparent;
       color: variables.$colors-neutral-900;
       border: 4px solid variables.$colors-accent-800;
+      position: relative;
+      overflow: hidden;
+
+      &:after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 100%;
+        top: 0;
+        left: 0;
+        direction: ltr;
+        z-index: -1;
+        border-radius: 2rem;
+        background-color: variables.$colors-accent-800;
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        background-color: variables.$colors-accent-800;
+
+        &:after {
+          left: 0;
+          right: auto;
+          width: 100%;
+        }
+
+        .icon svg path {
+          stroke: #ffffff;
+        }
+      }
+
+      //
     }
   }
 
@@ -696,6 +728,11 @@ video,
     max-width: 640px;
     margin: 0 auto;
     margin-bottom: 2rem;
+
+    b {
+      display: block;
+      color: variables.$colors-neutral-800;
+    }
 
     @include mixins.respond-to(large) {
       margin-bottom: 3rem;
