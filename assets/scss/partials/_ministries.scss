@@ -2,14 +2,28 @@
 @use "./variables";
 @use "./mixins";
 
-.children {
+.children,
+.youth,
+.worship,
+.cfl,
+.clg {
   .hero {
-    background-image: url("http://localhost:5173/assets/images/kids-page-photo-background.jpg");
     background-color: variables.$colors-neutral-700;
     background-position: top center;
+    height: 100vh;
 
     h1 {
       color: variables.$colors-secondary-100;
+    }
+
+    p {
+      margin-top: 2rem;
+      text-align: center;
+      margin: 0 auto;
+
+      @include mixins.respond-to(large) {
+        margin-top: 3rem;
+      }
     }
 
     .user-action {
@@ -31,6 +45,12 @@
         }
       }
     }
+  }
+}
+
+.children {
+  .hero {
+    background-image: url("http://localhost:5173/assets/images/kids-page-photo-background.jpg");
   }
 
   .quick-access {
@@ -165,23 +185,6 @@
 .youth {
   .hero {
     background-image: url("http://localhost:5173/assets/images/kids-page-photo-background.jpg");
-    background-color: variables.$colors-neutral-700;
-    background-position: top center;
-    height: 100vh;
-
-    h1 {
-      color: variables.$colors-secondary-100;
-    }
-
-    p {
-      margin-top: 2rem;
-      text-align: center;
-      margin: 0 auto;
-
-      @include mixins.respond-to(large) {
-        margin-top: 3rem;
-      }
-    }
   }
 
   .quick-access,
@@ -197,28 +200,10 @@
 .worship {
   .hero {
     background-image: url("http://localhost:5173/assets/images/worship.jpg");
-    background-color: variables.$colors-neutral-700;
-    background-position: top center;
-    height: 100vh;
-
-    h1 {
-      color: variables.$colors-secondary-100;
-    }
-
-    p {
-      margin-top: 2rem;
-      text-align: center;
-      margin: 0 auto;
-
-      @include mixins.respond-to(large) {
-        margin-top: 3rem;
-      }
-    }
   }
 
   .ombi {
     background-image: url("http://localhost:5173/assets/images/worship-2.jpg");
-    // background-color: variables.$colors-neutral-700;
     background-color: transparent;
     background-position: top center;
     height: 100vh;
@@ -249,22 +234,33 @@
 .cfl {
   .hero {
     background-image: url("http://localhost:5173/assets/images/Family.jpg");
-    background-color: variables.$colors-neutral-700;
-    background-position: top center;
-    height: 100vh;
+  }
+}
 
-    h1 {
-      color: variables.$colors-secondary-100;
+.clg {
+  .hero {
+    background-image: url("http://localhost:5173/assets/images/plugin-3.jpg");
+  }
+
+  .quoted-slider {
+    background-color: variables.$colors-neutral-850;
+    position: relative;
+
+    .swiper {
+      padding-bottom: 3rem;
     }
 
-    p {
-      margin-top: 2rem;
-      text-align: center;
-      margin: 0 auto;
+    .swiper-pagination-bullet {
+      background: variables.$colors-neutral-650;
+    }
 
-      @include mixins.respond-to(large) {
-        margin-top: 3rem;
-      }
+    .swiper-pagination-bullet-active {
+      background: variables.$colors-neutral-200;
+    }
+
+    .swiper-pagination {
+      position: absolute;
+      bottom: 0;
     }
   }
 }

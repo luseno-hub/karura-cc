@@ -1312,6 +1312,7 @@ video,
   height: 4rem;
   border-radius: 50%;
   overflow: hidden;
+  border: 1px solid hsl(213, 13%, 14%);
 }
 .testimonial__full--slide-content .slide__content-wrapper .quoted__byline--image img {
   width: 100%;
@@ -1328,7 +1329,7 @@ video,
 }
 .testimonial__full--slide-content .slide__content-wrapper .quoted__byline--text .name {
   text-transform: capitalize;
-  color: hsl(213, 13%, 14%);
+  color: hsl(0, 0%, 96%);
   font-family: inherit;
   font-size: 1rem;
   font-style: normal;
@@ -2868,31 +2869,77 @@ video,
   border-radius: 0;
 }
 
-.children .hero {
-  background-image: url("http://localhost:5173/assets/images/kids-page-photo-background.jpg");
+.children .hero,
+.youth .hero,
+.worship .hero,
+.cfl .hero,
+.clg .hero {
   background-color: hsl(0, 0%, 37%);
   background-position: top center;
+  height: 100vh;
 }
-.children .hero h1 {
+.children .hero h1,
+.youth .hero h1,
+.worship .hero h1,
+.cfl .hero h1,
+.clg .hero h1 {
   color: hsl(217, 100%, 96%);
 }
-.children .hero .user-action {
+.children .hero p,
+.youth .hero p,
+.worship .hero p,
+.cfl .hero p,
+.clg .hero p {
+  margin-top: 2rem;
+  text-align: center;
+  margin: 0 auto;
+}
+@media (min-width: 1200px) {
+  .children .hero p,
+  .youth .hero p,
+  .worship .hero p,
+  .cfl .hero p,
+  .clg .hero p {
+    margin-top: 3rem;
+  }
+}
+.children .hero .user-action,
+.youth .hero .user-action,
+.worship .hero .user-action,
+.cfl .hero .user-action,
+.clg .hero .user-action {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin: 2rem auto;
 }
-.children .hero .user-action button {
+.children .hero .user-action button,
+.youth .hero .user-action button,
+.worship .hero .user-action button,
+.cfl .hero .user-action button,
+.clg .hero .user-action button {
   width: 100%;
 }
 @media (min-width: 1200px) {
-  .children .hero .user-action {
+  .children .hero .user-action,
+  .youth .hero .user-action,
+  .worship .hero .user-action,
+  .cfl .hero .user-action,
+  .clg .hero .user-action {
     flex-direction: row;
     margin: 4rem auto;
   }
-  .children .hero .user-action button {
+  .children .hero .user-action button,
+  .youth .hero .user-action button,
+  .worship .hero .user-action button,
+  .cfl .hero .user-action button,
+  .clg .hero .user-action button {
     width: fit-content;
   }
+}
+
+.children .hero {
+  background-image: url("http://localhost:5173/assets/images/kids-page-photo-background.jpg");
 }
 .children .quick-access {
   background-color: hsl(48, 100%, 92%);
@@ -3015,22 +3062,6 @@ video,
 
 .youth .hero {
   background-image: url("http://localhost:5173/assets/images/kids-page-photo-background.jpg");
-  background-color: hsl(0, 0%, 37%);
-  background-position: top center;
-  height: 100vh;
-}
-.youth .hero h1 {
-  color: hsl(217, 100%, 96%);
-}
-.youth .hero p {
-  margin-top: 2rem;
-  text-align: center;
-  margin: 0 auto;
-}
-@media (min-width: 1200px) {
-  .youth .hero p {
-    margin-top: 3rem;
-  }
 }
 .youth .quick-access,
 .youth .hekalu,
@@ -3043,22 +3074,6 @@ video,
 
 .worship .hero {
   background-image: url("http://localhost:5173/assets/images/worship.jpg");
-  background-color: hsl(0, 0%, 37%);
-  background-position: top center;
-  height: 100vh;
-}
-.worship .hero h1 {
-  color: hsl(217, 100%, 96%);
-}
-.worship .hero p {
-  margin-top: 2rem;
-  text-align: center;
-  margin: 0 auto;
-}
-@media (min-width: 1200px) {
-  .worship .hero p {
-    margin-top: 3rem;
-  }
 }
 .worship .ombi {
   background-image: url("http://localhost:5173/assets/images/worship-2.jpg");
@@ -3088,22 +3103,27 @@ video,
 
 .cfl .hero {
   background-image: url("http://localhost:5173/assets/images/Family.jpg");
-  background-color: hsl(0, 0%, 37%);
-  background-position: top center;
-  height: 100vh;
 }
-.cfl .hero h1 {
-  color: hsl(217, 100%, 96%);
+
+.clg .hero {
+  background-image: url("http://localhost:5173/assets/images/plugin-3.jpg");
 }
-.cfl .hero p {
-  margin-top: 2rem;
-  text-align: center;
-  margin: 0 auto;
+.clg .quoted-slider {
+  background-color: hsl(0, 0%, 4%);
+  position: relative;
 }
-@media (min-width: 1200px) {
-  .cfl .hero p {
-    margin-top: 3rem;
-  }
+.clg .quoted-slider .swiper {
+  padding-bottom: 3rem;
+}
+.clg .quoted-slider .swiper-pagination-bullet {
+  background: hsl(0, 0%, 50%);
+}
+.clg .quoted-slider .swiper-pagination-bullet-active {
+  background: hsl(0, 0%, 96%);
+}
+.clg .quoted-slider .swiper-pagination {
+  position: absolute;
+  bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
