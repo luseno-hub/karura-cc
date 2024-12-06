@@ -5,6 +5,26 @@
 .about {
   .hero {
     background-image: url("http://localhost:5173/assets/images/outreach.jpg");
+    background-color: variables.$colors-neutral-700;
+    height: 100vh;
+
+    .subtitle {
+      text-align: center;
+      color: variables.$colors-secondary-100;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: block;
+      margin-top: 8rem;
+    }
+
+    h1 {
+      color: variables.$colors-secondary-100;
+    }
+
+    .user-action {
+      margin-top: 4rem;
+      gap: 1rem;
+    }
   }
 
   .journey {

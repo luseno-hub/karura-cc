@@ -222,45 +222,78 @@ video,
     color: variables.$colors-neutral-900;
     border: 1px solid variables.$colors-neutral-650;
 
-    &-outline-white {
-      background-color: transparent;
-      color: variables.$colors-neutral-100;
-      border: 1px solid variables.$colors-neutral-100;
-    }
-    &-outline-gray-thick {
-      background-color: transparent;
-      color: variables.$colors-neutral-900;
-      border: 4px solid variables.$colors-accent-800;
-      position: relative;
-      overflow: hidden;
+    &-outline {
+      &-white {
+        background-color: transparent;
+        color: variables.$colors-neutral-100;
+        border: 4px solid variables.$colors-neutral-600;
+        position: relative;
+        overflow: hidden;
+        transition: border 0.2s ease;
 
-      &:after {
-        position: absolute;
-        content: "";
-        width: 0;
-        height: 100%;
-        top: 0;
-        left: 0;
-        direction: ltr;
-        z-index: 1;
-        border-radius: 2rem;
-        background-color: variables.$colors-accent-800;
-        transition: width 0.3s ease;
-      }
-
-      &:hover {
         &:after {
+          position: absolute;
+          content: "";
+          width: 0;
+          height: 100%;
+          top: 0;
           left: 0;
-          right: auto;
-          width: 100%;
+          direction: ltr;
+          z-index: 1;
+          border-radius: 2rem;
+          background-color: variables.$colors-neutral-900;
+          transition: width 0.3s ease;
         }
 
-        .icon svg path {
-          stroke: #ffffff;
+        &:hover {
+          // color: variables.$colors-neutral-800;
+          border: 4px solid variables.$colors-neutral-900;
+
+          &:after {
+            left: 0;
+            right: auto;
+            width: 100%;
+          }
+
+          .icon svg path {
+            stroke: #ffffff;
+          }
         }
       }
 
-      //
+      &-gray-thick {
+        background-color: transparent;
+        color: variables.$colors-neutral-900;
+        border: 4px solid variables.$colors-accent-800;
+        position: relative;
+        overflow: hidden;
+
+        &:after {
+          position: absolute;
+          content: "";
+          width: 0;
+          height: 100%;
+          top: 0;
+          left: 0;
+          direction: ltr;
+          z-index: 1;
+          border-radius: 2rem;
+          background-color: variables.$colors-accent-800;
+          transition: width 0.3s ease;
+        }
+
+        &:hover {
+          &:after {
+            left: 0;
+            right: auto;
+            width: 100%;
+          }
+
+          .icon svg path {
+            stroke: #ffffff;
+          }
+        }
+      }
     }
   }
 

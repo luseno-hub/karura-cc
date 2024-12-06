@@ -704,7 +704,34 @@ video,
 .button__secondary-outline-white {
   background-color: transparent;
   color: hsl(0, 0%, 100%);
-  border: 1px solid hsl(0, 0%, 100%);
+  border: 4px solid hsl(210, 2%, 83%);
+  position: relative;
+  overflow: hidden;
+  transition: border 0.2s ease;
+}
+.button__secondary-outline-white:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: ltr;
+  z-index: 1;
+  border-radius: 2rem;
+  background-color: hsl(0, 0%, 0%);
+  transition: width 0.3s ease;
+}
+.button__secondary-outline-white:hover {
+  border: 4px solid hsl(0, 0%, 0%);
+}
+.button__secondary-outline-white:hover:after {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+.button__secondary-outline-white:hover .icon svg path {
+  stroke: #ffffff;
 }
 .button__secondary-outline-gray-thick {
   background-color: transparent;
@@ -1963,6 +1990,23 @@ video,
 
 .about .hero {
   background-image: url("http://localhost:5173/assets/images/outreach.jpg");
+  background-color: hsl(0, 0%, 37%);
+  height: 100vh;
+}
+.about .hero .subtitle {
+  text-align: center;
+  color: hsl(217, 100%, 96%);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-top: 8rem;
+}
+.about .hero h1 {
+  color: hsl(217, 100%, 96%);
+}
+.about .hero .user-action {
+  margin-top: 4rem;
+  gap: 1rem;
 }
 .about .journey {
   width: 100%;
