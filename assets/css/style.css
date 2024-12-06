@@ -688,6 +688,9 @@ video,
   text-decoration: none;
   cursor: pointer;
 }
+.button span {
+  z-index: 2;
+}
 .button__primary {
   background-color: hsl(57, 100%, 48%);
   color: hsl(0, 0%, 0%);
@@ -718,13 +721,10 @@ video,
   top: 0;
   left: 0;
   direction: ltr;
-  z-index: -1;
+  z-index: 1;
   border-radius: 2rem;
   background-color: hsl(49, 64%, 73%);
-  transition: all 0.3s ease;
-}
-.button__secondary-outline-gray-thick:hover {
-  background-color: hsl(49, 64%, 73%);
+  transition: width 0.3s ease;
 }
 .button__secondary-outline-gray-thick:hover:after {
   left: 0;
@@ -3342,6 +3342,7 @@ video,
 
 .events__single {
   width: 100%;
+  background-color: hsl(217, 100%, 96%);
 }
 .events__single .event-info {
   display: flex;

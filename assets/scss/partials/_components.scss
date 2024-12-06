@@ -207,6 +207,10 @@ video,
   text-decoration: none;
   cursor: pointer;
 
+  span {
+    z-index: 2;
+  }
+
   &__primary {
     background-color: variables.$colors-primary-900;
     color: variables.$colors-neutral-900;
@@ -238,15 +242,13 @@ video,
         top: 0;
         left: 0;
         direction: ltr;
-        z-index: -1;
+        z-index: 1;
         border-radius: 2rem;
         background-color: variables.$colors-accent-800;
-        transition: all 0.3s ease;
+        transition: width 0.3s ease;
       }
 
       &:hover {
-        background-color: variables.$colors-accent-800;
-
         &:after {
           left: 0;
           right: auto;
