@@ -50,6 +50,27 @@
   }
 }
 
+.events__single--hero {
+  background-image: url("http://localhost:5173/assets/images/Family.jpg");
+  padding: 4rem 0;
+  margin-top: -104px;
+  background-color: variables.$colors-secondary-900;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+
+  @include mixins.respond-to(large) {
+    min-height: 30vh;
+  }
+
+  h1 {
+    color: variables.$colors-secondary-100;
+    text-align: start;
+    margin-top: 4rem;
+  }
+}
+
 .events__single {
   width: 100%;
 
@@ -122,7 +143,7 @@
       .event-cost {
         font-size: 1.5rem;
         font-family: inherit;
-        font-weight: 600;
+        font-weight: 400;
         margin-top: 2rem;
       }
 
