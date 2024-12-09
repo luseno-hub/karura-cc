@@ -233,23 +233,243 @@
       </div>
     </header>
 
-    <main class="events conferences-landing">
-      <section class="hero">
+    <main class="events">
+      <section class="events__landing--hero">
         <div class="container">
-          <h1>Annual Conferences</h1>
-          <p>
-            Whilst Africa has put in place measures to enhance socio-economic
-            development, our Continent continues to face challenges that hampers
-            its progress.
-          </p>
-
+          <h1>Events Calendar</h1>
           <div class="user-action">
-            <a href="#" class="button button__outline-to-fill">
-              Men’s Conference
-            </a>
-            <a href="#" class="button button__outline-to-fill">
-              Women’s Conference
-            </a>
+            <a href="#" class="button button__primary"
+              ><span>Search for Event</span></a
+            >
+            <a href="#" class="button button__secondary-outline-white"
+              ><span>Annual Conferences</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="search-bar section-padding__half">
+        <div class="container">
+          <form action="">
+            <div class="form-group">
+              <span class="search-icon inline-center">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.5 18L22 22.5"
+                    stroke="#141B34"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M20 11.5C20 6.52944 15.9706 2.5 11 2.5C6.02944 2.5 2 6.52944 2 11.5C2 16.4706 6.02944 20.5 11 20.5C15.9706 20.5 20 16.4706 20 11.5Z"
+                    stroke="#141B34"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <input
+                type="search"
+                name="events-search"
+                id="eventsSearch"
+                placeholder="Search for events"
+              />
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="events-listing">
+        <div class="container">
+          <div class="date-selection">
+            <select
+              class="pick-year"
+              name="event-year"
+              id="eventYear"
+              title="select Event"
+            >
+              <option value="" disabled selected>Choose Year</option>
+              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+            </select>
+
+            <!-- <div class="select-month">
+              <span class="inline-center prev">
+                <svg
+                  width="6"
+                  height="9"
+                  viewBox="0 0 6 9"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 0.5L1.4714 4.0286C1.24918 4.25082 1.13807 4.36193 1.13807 4.5C1.13807 4.63807 1.24918 4.74918 1.4714 4.9714L5 8.5"
+                    stroke="#141B34"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <span class="selected-month">December</span>
+              <span class="inline-center next">
+                <svg
+                  width="6"
+                  height="9"
+                  viewBox="0 0 6 9"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 8.5L4.5286 4.9714C4.75082 4.74918 4.86193 4.63807 4.86193 4.5C4.86193 4.36193 4.75082 4.25082 4.5286 4.0286L1 0.5"
+                    stroke="#141B34"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </div> -->
+
+            <div class="select-month">
+              <select
+                class="pick-year"
+                name="event-year"
+                id="eventYear"
+                title="select Event"
+              >
+                <option value="" disabled selected>Choose Month</option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="date-month__separator">
+            <span id="selectedMonth" class="month">December</span>
+            <span id="selectedYear" class="year">2024</span>
+            <span class="line"></span>
+          </div>
+
+          <div class="events__list">
+            <div class="events__list--single">
+              <div class="events__list--single__date">
+                <span class="day">THU</span>
+                <span class="date">5</span>
+              </div>
+
+              <div class="events__list--single__image">
+                <img
+                  src="./assets/images/events-sample.jpeg"
+                  alt="sample image"
+                />
+              </div>
+
+              <div class="events__list--single__info">
+                <div class="meta-info">
+                  <div class="meta-info__time">
+                    <span class="inline-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="12"
+                        height="15"
+                        viewBox="0 0 12 15"
+                        fill="none"
+                      >
+                        <circle
+                          cx="5.99992"
+                          cy="7.4987"
+                          r="4.66667"
+                          stroke="#707075"
+                        />
+                        <path
+                          d="M8.66658 3.4987L8.48499 2.77232C8.26199 1.8803 8.15048 1.43429 7.83321 1.15872C7.79813 1.12825 7.76148 1.09964 7.72341 1.073C7.37912 0.832031 6.91939 0.832031 5.99992 0.832031C5.08045 0.832031 4.62071 0.832031 4.27642 1.073C4.23836 1.09964 4.20171 1.12825 4.16663 1.15872C3.84935 1.43429 3.73785 1.8803 3.51485 2.77232L3.33325 3.4987"
+                          stroke="#707075"
+                        />
+                        <path
+                          d="M3.33325 11.5L3.51485 12.2264C3.73785 13.1184 3.84935 13.5644 4.16663 13.84C4.20171 13.8704 4.23835 13.8991 4.27642 13.9257C4.62071 14.1667 5.08045 14.1667 5.99992 14.1667C6.91939 14.1667 7.37912 14.1667 7.72341 13.9257C7.76148 13.8991 7.79813 13.8704 7.83321 13.84C8.15048 13.5644 8.26199 13.1184 8.48499 12.2264L8.66658 11.5"
+                          stroke="#707075"
+                        />
+                        <path
+                          d="M5.99988 6.16406V7.50075L6.66654 8.16406"
+                          stroke="#707075"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <time datetime="2024-12-30T8:00">8:00am</time>
+                    <time datetime="2024-12-30TO8:00">5:00pm</time>
+                  </div>
+
+                  <div class="meta-info__location">
+                    <span class="inline-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="15"
+                        viewBox="0 0 14 15"
+                        fill="none"
+                      >
+                        <path
+                          d="M8.0785 13.7433C7.78937 14.014 7.40293 14.1654 7.00075 14.1654C6.59856 14.1654 6.21212 14.014 5.92299 13.7433C3.27535 11.2494 -0.272825 8.46331 1.45751 4.41847C2.39309 2.23147 4.6389 0.832031 7.00075 0.832031C9.36259 0.832031 11.6084 2.23147 12.544 4.41847C14.2721 8.45821 10.7327 11.2579 8.0785 13.7433Z"
+                          stroke="#707075"
+                        />
+                        <path
+                          d="M9.33335 6.83333C9.33335 8.122 8.28869 9.16667 7.00002 9.16667C5.71136 9.16667 4.66669 8.122 4.66669 6.83333C4.66669 5.54467 5.71136 4.5 7.00002 4.5C8.28869 4.5 9.33335 5.54467 9.33335 6.83333Z"
+                          stroke="#707075"
+                        />
+                      </svg>
+                    </span>
+                    <span>Elephant Hill</span>
+                  </div>
+                </div>
+
+                <h4>Twende Elephant Hill</h4>
+
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Eaque laborum consequatur, officia ipsa ipsam adipisc ...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-padding__half">
+        <div class="container">
+          <div class="eventsPagination">
+            <div class="cta__prev">
+              <span>prev</span>
+              <span>prev</span>
+            </div>
+            <div class="cta__pagination">
+              <span class="numLine">
+                <span class="cta__pagination--num">1</span>
+                <span class="cta__pagination--line">--</span>
+              </span>
+            </div>
+            <div class="cta__next">
+              <span>next</span>
+              <span>next</span>
+            </div>
           </div>
         </div>
       </section>

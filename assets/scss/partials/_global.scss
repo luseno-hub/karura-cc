@@ -50,6 +50,7 @@ html {
 
   @include mixins.respond-to(large) {
     margin: 0 auto;
+    padding: 0;
     max-width: 1440px;
   }
 }
@@ -206,7 +207,37 @@ h4 {
 .section-padding {
   padding: 4rem 0;
 
+  &__half {
+    padding: 2rem 0;
+  }
+
   @include mixins.respond-to(large) {
     padding: 9.325rem 0;
+
+    &__half {
+      padding: 4rem 0;
+    }
+  }
+}
+
+.user-action {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  button,
+  a {
+    width: 100%;
+  }
+
+  @include mixins.respond-to(large) {
+    flex-direction: row;
+    margin-bottom: 4rem;
+
+    button,
+    a {
+      width: fit-content;
+    }
   }
 }
