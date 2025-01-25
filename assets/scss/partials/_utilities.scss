@@ -1,0 +1,40 @@
+@use "./global";
+@use "./variables";
+@use "./mixins";
+
+.nav-open {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  background-color: variables.$colors-neutral-850;
+  padding: 1rem;
+}
+
+.ul-open {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 540px;
+  overflow: scroll;
+
+  li {
+    .dropdown {
+      transform: unset;
+      position: unset;
+      top: unset;
+      left: unset;
+      background-color: unset;
+      border-radius: unset;
+      min-width: 250px;
+      box-shadow: unset;
+      list-style: none;
+      padding: unset;
+      margin: 0;
+      margin-top: -0.875rem !important;
+    }
+
+    &:has(> ul) > ul {
+      display: flex !important;
+    }
+  }
+}

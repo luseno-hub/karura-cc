@@ -48,10 +48,15 @@
   }
 
   #menu-toggle {
+    display: block;
     width: 42px;
     height: 42px;
     position: relative;
     cursor: pointer;
+
+    @include mixins.respond-to(large) {
+      display: none;
+    }
 
     #hamburger {
       position: absolute;
@@ -135,6 +140,7 @@
   &__navbar {
     ul {
       display: none;
+      list-style: none;
 
       @include mixins.respond-to(large) {
         display: flex;
@@ -142,19 +148,18 @@
         align-items: center;
         justify-content: flex-start;
         gap: 2rem;
-        list-style: none;
       }
 
       li {
         margin: 0;
-        padding: 1rem 0;
         position: relative;
         font-size: 0.875rem;
 
         a {
-          color: variables.$colors-neutral-850;
           color: variables.$colors-neutral-100;
           text-decoration: none;
+          padding: 1rem 0;
+          width: 100%;
         }
 
         &:hover .dropdown {
@@ -165,29 +170,46 @@
         }
 
         .dropdown {
-          transform: scale(1, 0);
-          position: absolute;
-          top: 100%;
-          left: 0;
-          background-color: variables.$colors-neutral-100;
-          border-radius: 1rem;
+          transform: unset;
+          position: unset;
+          top: unset;
+          left: unset;
+          background-color: unset;
+          border-radius: unset;
           min-width: 250px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: unset;
           list-style: none;
-          padding: 1rem 0;
+          padding: unset;
           margin: 0;
+
+          @include mixins.respond-to(large) {
+            transform: scale(1, 0);
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: variables.$colors-neutral-100;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            list-style: none;
+            padding: 1rem 0;
+          }
 
           // Caret
           &::before {
-            content: "";
-            position: absolute;
-            top: -6px;
-            left: 20px;
-            width: 0;
-            height: 0;
-            border-left: 6px solid transparent;
-            border-right: 6px solid transparent;
-            border-bottom: 6px solid variables.$colors-neutral-100;
+            display: none;
+
+            @include mixins.respond-to(large) {
+              display: block !important;
+              content: "";
+              position: absolute;
+              top: -6px;
+              left: 20px;
+              width: 0;
+              height: 0;
+              border-left: 6px solid transparent;
+              border-right: 6px solid transparent;
+              border-bottom: 6px solid variables.$colors-neutral-100;
+            }
           }
 
           li {
@@ -195,39 +217,60 @@
             width: 100%;
 
             a {
-              color: #333;
+              color: variables.$colors-neutral-100;
               text-decoration: none;
+              text-transform: capitalize;
               display: flex;
               padding: 0.5rem 1rem;
               line-height: 120%;
+              width: 100%;
 
-              &:hover {
-                background-color: variables.$colors-neutral-850;
-                color: variables.$colors-neutral-150;
+              @include mixins.respond-to(large) {
+                color: #333;
+
+                &:hover {
+                  color: hsl(217, 100%, 37%);
+                  transform: translateX(10px);
+                }
               }
             }
           }
 
           .inner-dropdown {
-            position: absolute;
-            top: 0%;
-            right: 100%;
-            background-color: variables.$colors-neutral-100;
-            border-radius: 1rem 0 1rem 1rem;
+            position: unset;
+            top: unset;
+            right: unset;
+            background-color: unset;
+            border-radius: unset;
             min-width: 250px;
             list-style: none;
-            padding: 1rem 0;
+            padding: 0 1rem;
             margin: 0;
+
+            @include mixins.respond-to(large) {
+              position: absolute;
+              top: 0%;
+              right: 100%;
+              background-color: variables.$colors-neutral-100;
+              border-radius: 1rem 0 1rem 1rem;
+              padding: 1rem 0;
+            }
           }
         }
       }
 
       li:has(> ul) > ul {
-        display: none !important;
+        display: block !important;
+
+        @include mixins.respond-to(large) {
+          display: none !important;
+        }
       }
 
       li:has(> ul):hover > ul {
-        display: block !important;
+        @include mixins.respond-to(large) {
+          display: block !important;
+        }
       }
     }
   }

@@ -3,12 +3,29 @@ const tabs = document.querySelectorAll(".tab");
 const contents = document.querySelectorAll(".tab-content");
 // const swiperContainer = document.querySelector(".swiper");
 const swiperContainers = document.querySelectorAll(".swiper");
+const navBar = document.querySelector(".header__navbar");
+const navUl = navBar.querySelector("ul");
 const menuToggle = document.querySelector("#menu-toggle");
+const isMobile = window.matchMedia("(max-width: 1199px)").matches;
 
 // ---------------> Hamburger menu <----------------
 menuToggle &&
   menuToggle.addEventListener("click", function () {
     this.classList.toggle("open");
+
+    if (this.classList.contains("open") && isMobile) {
+      //show the menu
+      navBar.classList.add("nav-open");
+
+      if (navBar.classList.contains("nav-open")) {
+        navUl.classList.add("ul-open");
+      } else {
+        // navUl.classList.remove("ul-open");
+      }
+    } else {
+      navBar.classList.remove("nav-open");
+      navUl.classList.remove("ul-open");
+    }
   });
 
 // ---------------> Tabs <----------------
