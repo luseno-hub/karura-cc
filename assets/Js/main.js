@@ -108,30 +108,42 @@ function reveal() {
 window.addEventListener("scroll", reveal);
 
 // ---------------> Progress Bar <----------------
-function setProgress(element, percent) {
-  const radius = 54; // Radius of the circle
-  const circumference = 2 * Math.PI * radius;
-  const offset = circumference - (percent / 100) * circumference;
+// Load entire document first
+document.addEventListener("DOMContentLoaded", () => {
+  function setProgress(element, percent) {
+    const radius = 54; // Radius of the circle
+    const circumference = 2 * Math.PI * radius;
+    const offset = circumference - (percent / 100) * circumference;
 
-  // Update the progress bar stroke-dashoffset
-  const progressBar = element.querySelector(".progress-bar");
-  progressBar.style.strokeDashoffset = offset;
+    // Update the progress bar stroke-dashoffset
+    const progressBar = element.querySelector(".progress-bar");
+    const progressText = element.querySelector(".progress-text");
 
-  // Update the text
-  const progressText = element.querySelector(".progress-text");
-  progressText.textContent = `${percent}%`;
-}
+    if (!progressBar || !progressText) {
+      console.error("Missing .progress-bar or .progress-text in the element.");
+      return;
+    }
 
-// Animate progress
-const progressContainer = document.querySelector(".progress-container");
-
-// Simulate loading progress
-let progress = 0;
-const interval = setInterval(() => {
-  if (progress > 100) {
-    clearInterval(interval);
-  } else {
-    setProgress(progressContainer, progress);
-    progress += 1;
+    progressBar.style.strokeDashoffset = offset;
+    progressText.textContent = `${percent}%`;
   }
-}, 50); // Update every 50ms
+
+  // Animate progress
+  const progressContainer = document.querySelector(".progress-container");
+
+  if (!progressContainer) {
+    console.error("Progress container not found.");
+    return;
+  }
+
+  // Simulate loading progress
+  let progress = 0;
+  const interval = setInterval(() => {
+    if (progress > 100) {
+      clearInterval(interval);
+    } else {
+      setProgress(progressContainer, progress);
+      progress += 1;
+    }
+  }, 50); // Update every 50ms
+});
