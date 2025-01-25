@@ -313,6 +313,10 @@ html {
   text-size-adjust: 100%;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 :root {
   font-family: "Gabarito", system-ui, Helvetica, Arial, sans-serif;
   line-height: 1.6;

@@ -1,4 +1,5 @@
 // ---------------> Variables <----------------
+const body = document.querySelector("body");
 const tabs = document.querySelectorAll(".tab");
 const contents = document.querySelectorAll(".tab-content");
 // const swiperContainer = document.querySelector(".swiper");
@@ -16,6 +17,7 @@ menuToggle &&
     if (this.classList.contains("open") && isMobile) {
       //show the menu
       navBar.classList.add("nav-open");
+      body.classList.add("no-scroll");
 
       if (navBar.classList.contains("nav-open")) {
         navUl.classList.add("ul-open");
@@ -25,6 +27,7 @@ menuToggle &&
     } else {
       navBar.classList.remove("nav-open");
       navUl.classList.remove("ul-open");
+      body.classList.remove("no-scroll");
     }
   });
 
