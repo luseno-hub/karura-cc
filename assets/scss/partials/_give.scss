@@ -1,42 +1,21 @@
+@use "./global";
 @use "./variables";
+@use "./mixins";
 
 .hero {
   &.give {
-    background-color: variables.$colors-secondary-900;
     background-image: url("http://localhost:5173/assets/images/outreach.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: multiply;
-    height: 60vh;
-  }
-
-  h2 {
-    margin-top: 104px;
-    margin-bottom: 2.625rem;
-    color: variables.$colors-primary-900;
-  }
-
-  p {
-    max-width: 49rem;
-    margin-bottom: 2.625rem;
-    color: hsl(0, 0%, 96%);
-    text-align: center;
-    font-size: 1.2rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-  }
-
-  .nudge-down {
-    display: block;
-    animation: bounce 2s infinite ease-in-out;
   }
 }
 
 .give-options {
-  padding: 9.375rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   background-color: variables.$colors-accent-900;
+
+  @include mixins.respond-to(large) {
+    padding: 9.375rem;
+  }
 
   .tabs-wrapper {
     display: flex;
@@ -54,18 +33,22 @@
   }
 
   .title {
-    color: #242424;
+    color: variables.$colors-neutral-800;
     margin: 2rem 0;
     text-align: center;
   }
 
   .form-give {
-    padding: 2rem;
+    padding: 1rem;
+    margin: 0 auto;
     width: 100%;
     max-width: 450px;
-    background-color: variables.$colors-neutral-150;
+    background-color: variables.$colors-neutral-100;
     border-radius: 0.5rem;
-    margin: 0 auto;
+
+    @include mixins.respond-to(large) {
+      padding: 2rem;
+    }
   }
 
   .form-group {

@@ -1,11 +1,22 @@
-// @use "../../node_modules/normalize.css/normalize.css";
 @use "../../node_modules/normalize.css/normalize.css";
 
+@use "../scss/partials/mixins";
 @use "../scss/partials/global";
 @use "../scss/partials/components";
 @use "../scss/partials/header";
 @use "../scss/partials/footer";
 @use "../scss/partials/home";
+<<<<<<< HEAD
 @use "../scss/partials/focus";
 @use "../scss/partials/give";
 @use "../scss/partials/about";
+=======
+@use "../scss/partials/about";
+@use "../scss/partials/give";
+@use "../scss/partials/leadership";
+@use "../scss/partials/focus";
+@use "../scss/partials/sermons";
+@use "../scss/partials/coah";
+@use "../scss/partials/ministries";
+@use "../scss/partials/events";
+>>>>>>> main

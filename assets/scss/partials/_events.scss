@@ -1,0 +1,399 @@
+@use "./global";
+@use "./variables";
+@use "./mixins";
+
+.events {
+  .hero {
+    background-color: variables.$colors-neutral-700;
+    background-position: top center;
+    height: 100vh;
+
+    h1 {
+      color: variables.$colors-secondary-100;
+    }
+
+    p {
+      margin-top: 2rem;
+      text-align: center;
+      margin: 0 auto;
+
+      @include mixins.respond-to(large) {
+        margin-top: 3rem;
+      }
+    }
+  }
+}
+
+.conferences-landing {
+  .hero {
+    background-image: url("http://localhost:5173/assets/images/Family.jpg");
+  }
+}
+
+.events__landing--hero,
+.events__single--hero {
+  padding: 4rem 0;
+  margin-top: -104px;
+  background-color: variables.$colors-secondary-900;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+
+  @include mixins.respond-to(large) {
+    min-height: 30vh;
+  }
+
+  h1 {
+    color: variables.$colors-secondary-100;
+    text-align: start;
+    margin-top: 4rem;
+  }
+}
+
+.events__landing--hero {
+  background-image: url("http://localhost:5173/assets/images/Family.jpg");
+
+  .user-action {
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 1.5rem;
+
+    @include mixins.respond-to(large) {
+      margin-top: 3rem;
+    }
+  }
+}
+
+.events__single--hero {
+  background-image: url("http://localhost:5173/assets/images/Family.jpg");
+}
+
+.events__single {
+  width: 100%;
+  background-color: variables.$colors-secondary-100;
+
+  .event-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+
+    @include mixins.respond-to(large) {
+      flex-direction: row;
+    }
+
+    &__image {
+      width: 100%;
+      height: auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+      }
+
+      @include mixins.respond-to(large) {
+        width: calc((100% - 2rem) / 2);
+      }
+    }
+
+    &__content {
+      width: 100%;
+
+      @include mixins.respond-to(large) {
+        width: calc((100% - 2rem) / 2);
+      }
+
+      .status-indicator {
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        margin-bottom: 2rem;
+      }
+
+      .body-title {
+        font-family: inherit;
+        font-size: 1.25rem;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      .body-text {
+        color: variables.$colors-meta;
+        margin-bottom: 2rem;
+      }
+
+      .location,
+      .date,
+      .time {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.25rem;
+        margin-bottom: 0.5rem;
+        color: variables.$colors-meta;
+      }
+
+      .event-cost {
+        font-size: 1.5rem;
+        font-family: inherit;
+        font-weight: 400;
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+.search-bar {
+  .form-group {
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    .search-icon {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    input {
+      width: 100%;
+      padding: 1rem 3rem;
+      border-radius: 2rem;
+      border: 1px solid #e0e0e0;
+    }
+  }
+}
+
+.events-listing {
+  .date-selection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+
+    @include mixins.respond-to(large) {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .pick-year,
+    .pick-month {
+      background-color: variables.$colors-neutral-400;
+      padding: 0.5rem;
+      appearance: none; /* Remove default styling */
+      -webkit-appearance: none; /* Safari */
+      -moz-appearance: none; /* Firefox */
+      background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1"><path d="M1 1l4 4 4-4"/></svg>')
+        no-repeat right 1rem center; /* Custom SVG */
+      background-size: 0.875rem; /* Size of the SVG */
+      padding-right: 2.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .date-month__separator {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.25rem;
+    margin: 2rem 0;
+
+    .year {
+      display: inline-flex;
+      margin-right: 0.5rem;
+    }
+
+    .line {
+      flex: 1;
+      height: 1px;
+      background-color: variables.$colors-neutral-400;
+    }
+  }
+
+  .events__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+
+    @include mixins.respond-to(large) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &--single {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      width: 100%;
+
+      @include mixins.respond-to(large) {
+        flex-direction: row;
+        gap: 1.5rem;
+        width: calc((100% - 3rem) / 2);
+      }
+
+      &__date {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+
+        .day {
+          color: #808080;
+          font-family: inherit;
+          font-size: 0.75rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 88%; /* 0.66rem */
+          letter-spacing: -0.015rem;
+        }
+        .date {
+          color: #000;
+          text-align: center;
+          font-family: inherit;
+          font-size: 1.5rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 88%; /* 1.32rem */
+          letter-spacing: -0.03rem;
+        }
+      }
+
+      &__image {
+        min-width: 6.5rem;
+        width: 6.5rem;
+        height: 8rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top center;
+        }
+      }
+
+      &__info {
+        .meta-info {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          justify-content: flex-start;
+          color: #808080;
+          margin-bottom: 1rem;
+          line-height: 88%;
+
+          @include mixins.respond-to(large) {
+            flex-direction: row;
+            align-items: center;
+            gap: 2rem;
+          }
+
+          &__time,
+          &__location {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.875rem;
+          }
+        }
+
+        p {
+          color: #808080;
+          font-family: inherit;
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%; /* 1.3125rem */
+          max-width: 300px;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.navigate-events {
+  width: 100%;
+
+  .eventsPagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .cta__prev,
+    .cta__next {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.5rem;
+      text-decoration: none;
+      padding: 0.5rem;
+      border-radius: 2rem;
+
+      &:hover {
+        background-color: variables.$colors-neutral-400;
+      }
+
+      .text {
+        color: #808080;
+        display: none;
+
+        @include mixins.respond-to(large) {
+          display: inline-block;
+        }
+      }
+    }
+
+    .cta__pagination {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+
+      .numLine {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.125rem;
+
+        &--num {
+          color: variables.$colors-neutral-650;
+        }
+
+        &--line {
+          display: inline-block;
+          width: 24px;
+          height: 2px;
+          transform: scale(0, 1);
+        }
+
+        &.active {
+          .numLine--num {
+            color: variables.$colors-neutral-850;
+          }
+          .numLine--line {
+            background-color: variables.$colors-neutral-850;
+            transform: scale(1, 1);
+          }
+        }
+      }
+    }
+  }
+}

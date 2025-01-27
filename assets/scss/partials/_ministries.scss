@@ -1,0 +1,312 @@
+@use "./global";
+@use "./variables";
+@use "./mixins";
+
+.children,
+.youth,
+.worship,
+.cfl,
+.clg,
+.outreach,
+.compassion,
+.leadership,
+.communications {
+  .hero {
+    background-color: variables.$colors-neutral-700;
+    background-position: top center;
+    height: 100vh;
+
+    h1 {
+      color: variables.$colors-secondary-100;
+    }
+
+    p {
+      margin-top: 2rem;
+      text-align: center;
+      margin: 0 auto;
+
+      @include mixins.respond-to(large) {
+        margin-top: 3rem;
+      }
+    }
+
+    .user-action {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 2rem auto;
+
+      button {
+        width: 100%;
+      }
+
+      @include mixins.respond-to(large) {
+        flex-direction: row;
+        margin: 4rem auto;
+
+        button {
+          width: fit-content;
+        }
+      }
+    }
+  }
+}
+
+.children {
+  .hero {
+    background-image: url("http://localhost:5173/assets/images/kids-page-photo-background.jpg");
+  }
+
+  .quick-access {
+    background-color: variables.$colors-accent-900;
+  }
+
+  .kisima {
+    background-color: variables.$colors-neutral-850;
+
+    h3,
+    p {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+      font-family: inherit;
+      font-style: normal;
+    }
+
+    h3 {
+      color: variables.$colors-neutral-200;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: 700;
+      line-height: 100%;
+
+      @include mixins.respond-to(large) {
+        margin-bottom: 4rem;
+      }
+    }
+
+    p {
+      color: variables.$colors-neutral-600;
+      margin-bottom: 2rem;
+    }
+
+    .image-bloc {
+      width: 100%;
+      margin-top: 2rem;
+
+      @include mixins.respond-to(large) {
+        margin-top: 4rem;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .annual-activities {
+    background-color: variables.$colors-accent-900;
+
+    h3 {
+      color: variables.$colors-neutral-800;
+      margin-bottom: 2rem;
+    }
+
+    .flex__col-3 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+      row-gap: 1.5rem;
+      width: 100%;
+
+      @include mixins.respond-to(large) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 4rem;
+      }
+
+      &__single--3-tier {
+        width: 100%;
+        margin-bottom: 2rem;
+
+        @include mixins.respond-to(large) {
+          width: calc((100% - 4rem) / 3);
+          margin-bottom: 0;
+        }
+
+        .image {
+          width: 100%;
+          height: 16rem;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+          }
+        }
+
+        .title {
+          display: block;
+          color: variables.$colors-neutral-850;
+          font-family: inherit;
+          font-size: 1.25rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 88%;
+          letter-spacing: -0.03rem;
+          margin: 1.25rem 0 0.5rem 0;
+
+          @include mixins.respond-to(large) {
+            font-size: 1.5rem;
+          }
+        }
+
+        .desc {
+          display: block;
+          color: variables.$colors-neutral-650;
+          font-family: inherit;
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+
+          @include mixins.respond-to(large) {
+            font-size: 1rem;
+          }
+        }
+
+        button {
+          margin-top: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+.youth {
+  .hero {
+    background-image: url("http://localhost:5173/assets/images/kids-page-photo-background.jpg");
+  }
+
+  .quick-access,
+  .hekalu,
+  .emerge,
+  .vuka,
+  .young-adults,
+  .junction {
+    background-color: variables.$colors-secondary-100;
+  }
+}
+
+.worship {
+  .hero {
+    background-image: url("http://localhost:5173/assets/images/worship.jpg");
+  }
+
+  .ombi {
+    background-image: url("http://localhost:5173/assets/images/worship-2.jpg");
+    background-color: transparent;
+    background-position: top center;
+    height: 100vh;
+    color: variables.$colors-neutral-100;
+
+    .content-container {
+      background-color: hsl(217, 100%, 37%, 0.7);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      width: fit-content;
+      width: 720px;
+      height: 720px;
+      border-radius: 50%;
+      margin: 0 auto;
+      padding: 8rem;
+    }
+
+    h2,
+    p {
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 2rem;
+      max-width: 640px;
+    }
+  }
+}
+
+.cfl {
+  .hero {
+    background-image: url("http://localhost:5173/assets/images/Family.jpg");
+  }
+}
+
+.clg {
+  .hero {
+    background-image: url("http://localhost:5173/assets/images/plugin-3.jpg");
+  }
+
+  .quoted-slider {
+    background-color: variables.$colors-neutral-850;
+    position: relative;
+
+    .swiper {
+      padding-bottom: 3rem;
+    }
+
+    .swiper-pagination-bullet {
+      background: variables.$colors-neutral-650;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: variables.$colors-neutral-200;
+    }
+
+    .swiper-pagination {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+.outreach {
+  .hero {
+    background-image: url("http://localhost:5173/assets/images/Family.jpg");
+  }
+
+  .break-image {
+    background-image: url("http://localhost:5173/assets/images/Family.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    width: 100%;
+    height: 250px;
+
+    @include mixins.respond-to(large) {
+      height: 500px;
+    }
+  }
+
+  .church-planting {
+    background-color: variables.$colors-secondary-100;
+  }
+}
+
+.compassion {
+  .hero {
+    background-image: url("http://localhost:5173/assets/images/Family.jpg");
+  }
+}
+
+.leadership {
+  .hero {
+    background-image: url("http://localhost:5173/assets/images/Family.jpg");
+  }
+}
+
+.communications {
+  .hero {
+    background-image: url("http://localhost:5173/assets/images/Family.jpg");
+  }
+}
