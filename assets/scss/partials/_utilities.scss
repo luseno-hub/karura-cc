@@ -38,3 +38,30 @@
     }
   }
 }
+
+.user-action {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+
+  button,
+  a {
+    width: 100%;
+    text-align: center;
+  }
+
+  @include mixins.respond-to(large) {
+    flex-direction: row;
+    margin-top: 4rem;
+
+    button,
+    a {
+      width: fit-content;
+    }
+  }
+}

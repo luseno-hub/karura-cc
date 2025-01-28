@@ -54,15 +54,15 @@
 .events__landing--hero {
   background-image: url("http://localhost:5173/assets/images/Family.jpg");
 
-  .user-action {
-    justify-content: flex-start;
-    gap: 1rem;
-    margin-top: 1.5rem;
+  // .user-action {
+  //   justify-content: flex-start;
+  //   gap: 1rem;
+  //   margin-top: 1.5rem;
 
-    @include mixins.respond-to(large) {
-      margin-top: 3rem;
-    }
-  }
+  //   @include mixins.respond-to(large) {
+  //     margin-top: 3rem;
+  //   }
+  // }
 }
 
 .events__single--hero {

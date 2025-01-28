@@ -21,10 +21,10 @@
       color: variables.$colors-secondary-100;
     }
 
-    .user-action {
-      margin-top: 4rem;
-      gap: 1rem;
-    }
+    // .user-action {
+    //   margin-top: 4rem;
+    //   gap: 1rem;
+    // }
   }
 
   .journey {
@@ -114,23 +114,23 @@
       line-height: 140%;
     }
 
-    .user-action {
-      width: 100%;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-      justify-content: center;
-      margin-top: 2rem;
+    // .user-action {
+    //   width: 100%;
+    //   margin: 0 auto;
+    //   display: flex;
+    //   align-items: center;
+    //   flex-direction: row;
+    //   justify-content: center;
+    //   margin-top: 2rem;
 
-      @include mixins.respond-to(large) {
-        margin-top: 4rem;
-      }
+    //   @include mixins.respond-to(large) {
+    //     margin-top: 4rem;
+    //   }
 
-      a {
-        text-align: center;
-      }
-    }
+    //   a {
+    //     text-align: center;
+    //   }
+    // }
   }
 
   .strategic-plan {

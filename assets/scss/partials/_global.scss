@@ -226,24 +226,24 @@ h4 {
   }
 }
 
-.user-action {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 2rem;
+// .user-action {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 1rem;
+//   margin-bottom: 2rem;
 
-  button,
-  a {
-    width: 100%;
-  }
+//   button,
+//   a {
+//     width: 100%;
+//   }
 
-  @include mixins.respond-to(large) {
-    flex-direction: row;
-    margin-bottom: 4rem;
+//   @include mixins.respond-to(large) {
+//     flex-direction: row;
+//     margin-bottom: 4rem;
 
-    button,
-    a {
-      width: fit-content;
-    }
-  }
-}
+//     button,
+//     a {
+//       width: fit-content;
+//     }
+//   }
+// }

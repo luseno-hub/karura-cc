@@ -499,27 +499,6 @@ h4 {
   }
 }
 
-.user-action {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-.user-action button,
-.user-action a {
-  width: 100%;
-}
-@media (min-width: 1200px) {
-  .user-action {
-    flex-direction: row;
-    margin-bottom: 4rem;
-  }
-  .user-action button,
-  .user-action a {
-    width: fit-content;
-  }
-}
-
 .hero {
   display: grid;
   place-content: center;
@@ -1006,9 +985,6 @@ video,
     margin: 2rem 0;
   }
 }
-.content-list .user-action {
-  justify-content: flex-start;
-}
 .content-list nav {
   flex: 1;
   width: 100%;
@@ -1354,9 +1330,6 @@ video,
     text-align: start;
     margin-left: 0;
   }
-}
-.content-image__half-col-bloc .content-container .user-action {
-  justify-content: flex-start;
 }
 .content-image__half-col-bloc .image {
   width: 100%;
@@ -2059,10 +2032,6 @@ video,
 .about .hero h1 {
   color: hsl(217, 100%, 96%);
 }
-.about .hero .user-action {
-  margin-top: 4rem;
-  gap: 1rem;
-}
 .about .journey {
   width: 100%;
   background-color: hsl(48, 100%, 92%);
@@ -2146,23 +2115,6 @@ video,
   font-size: 1rem;
   font-weight: 400;
   line-height: 140%;
-}
-.about .leadership .user-action {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 2rem;
-}
-@media (min-width: 1200px) {
-  .about .leadership .user-action {
-    margin-top: 4rem;
-  }
-}
-.about .leadership .user-action a {
-  text-align: center;
 }
 .about .strategic-plan {
   padding: 4rem 0;
@@ -3098,56 +3050,6 @@ video,
     margin-top: 3rem;
   }
 }
-.children .hero .user-action,
-.youth .hero .user-action,
-.worship .hero .user-action,
-.cfl .hero .user-action,
-.clg .hero .user-action,
-.outreach .hero .user-action,
-.compassion .hero .user-action,
-.leadership .hero .user-action,
-.communications .hero .user-action {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin: 2rem auto;
-}
-.children .hero .user-action button,
-.youth .hero .user-action button,
-.worship .hero .user-action button,
-.cfl .hero .user-action button,
-.clg .hero .user-action button,
-.outreach .hero .user-action button,
-.compassion .hero .user-action button,
-.leadership .hero .user-action button,
-.communications .hero .user-action button {
-  width: 100%;
-}
-@media (min-width: 1200px) {
-  .children .hero .user-action,
-  .youth .hero .user-action,
-  .worship .hero .user-action,
-  .cfl .hero .user-action,
-  .clg .hero .user-action,
-  .outreach .hero .user-action,
-  .compassion .hero .user-action,
-  .leadership .hero .user-action,
-  .communications .hero .user-action {
-    flex-direction: row;
-    margin: 4rem auto;
-  }
-  .children .hero .user-action button,
-  .youth .hero .user-action button,
-  .worship .hero .user-action button,
-  .cfl .hero .user-action button,
-  .clg .hero .user-action button,
-  .outreach .hero .user-action button,
-  .compassion .hero .user-action button,
-  .leadership .hero .user-action button,
-  .communications .hero .user-action button {
-    width: fit-content;
-  }
-}
 
 .children .hero {
   background-image: url("http://localhost:5173/assets/images/kids-page-photo-background.jpg");
@@ -3418,16 +3320,6 @@ video,
 
 .events__landing--hero {
   background-image: url("http://localhost:5173/assets/images/Family.jpg");
-}
-.events__landing--hero .user-action {
-  justify-content: flex-start;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-@media (min-width: 1200px) {
-  .events__landing--hero .user-action {
-    margin-top: 3rem;
-  }
 }
 
 .events__single--hero {
@@ -3761,6 +3653,32 @@ video,
 }
 .ul-open li:has(> ul) > ul {
   display: flex !important;
+}
+
+.user-action {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.user-action button,
+.user-action a {
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .user-action {
+    flex-direction: row;
+    margin-top: 4rem;
+  }
+  .user-action button,
+  .user-action a {
+    width: fit-content;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
